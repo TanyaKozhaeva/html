@@ -1,0 +1,45 @@
+.debug
+	+debug(rgba(0, 0, 0, .3), 1px solid red)
+	display: none
+.wrapper
+	+wrapper()
+.row
+	+row-flex()
+.text
+	font-family: $fontText
+	+fontRem(13px)
+	//line-height: 1.85 !!!!!!!!!!
+	letter-spacing: 0.5px
+	color: $textColor
+	&_size
+		&_m
+			+fontRem(16px)
+			line-height: 1.63
+			//text-align: center
+	&_color
+		&_light
+			color: #fff
+.subtitle
+	font-family: $fontTitle
+	+fontRem(18px)
+	font-weight: bold	
+	text-transform: uppercase
+	color: $textColorBlack
+	&_size_smaller
+		+fontRem(16px)
+
+.icon
+	width: 100%
+	height: 100%
+.color_main
+	fill: $mainColor
+.color_light
+	fill: #fff
+.social
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__link
+		display: block
+		width: 19px
+		height: 19px

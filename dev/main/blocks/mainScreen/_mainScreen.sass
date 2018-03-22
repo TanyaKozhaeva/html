@@ -1,0 +1,64 @@
+.mainScreen
+	//display: flex
+	//align-items: center
+	+paddingRem(503px, 0, 333px, 0)
+	background-color:#fcfcfc
+	position: relative
+	&::before
+		content: ""
+		display: block
+		width: 46.5rem
+		height: 47.25rem
+		box-shadow: inset 0 0 0 9rem $mainColor
+		border-radius: 50%
+		position: absolute
+		top: 3.25rem
+		right: -4.31rem	
+	&::after
+		content: ""
+		display: block
+		width: 33.875rem
+		height: 58.5rem
+		position: absolute
+		right: 10.7%
+		bottom: 0
+		background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat 
+		background-size: cover
+
+
+	&__row
+		flex-direction: column
+
+	&__title
+		margin-bottom: 5.5625rem
+		font-family: $fontSubtitle
+		color: $textColorBlack
+		+fontRem(60px)
+		text-transform: uppercase
+		font-weight: 900
+		position: relative
+		z-index: 1
+		span
+			display: block
+		&::before
+			content: ""
+			display: block
+			width: 198px
+			height: 198px
+			border-radius: 50%
+			position: absolute
+			top: -24px
+			left: -24px
+			z-index: -1
+			background-color: $mainColor
+
+	&__promo
+		width: 67.1%
+		+fontRem(13px)
+		margin-bottom: 1.5625rem
+		line-height: 1.85
+		letter-spacing: 0.5px
+	&__btn
+		display: block
+
+

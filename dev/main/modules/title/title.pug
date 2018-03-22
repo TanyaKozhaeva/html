@@ -1,0 +1,5 @@
+mixin title(data)
+	.title&attributes(attributes)
+		h2.title__item.title__item_main= data.main
+		if data.behind
+			span.title__item.title__item_behind= data.behind

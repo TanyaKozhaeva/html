@@ -1,0 +1,64 @@
+.plan
+	+col()
+	+size-lg(4)
+	text-align: center
+	&__header
+		+paddingEm(30px, 0, 39px, 0)
+		color: #fff
+		background-color: gray
+	&__title
+		+fontRem(15px)
+		font-family: $fontText
+		font-weight: 600
+		letter-spacing: 3px
+		+marginRem(0, 0, 45px, 0)
+		text-transform: uppercase
+	&__priceBlock
+		+marginEm(0, 0, 34px, 0)
+	&__price
+		+fontRem(60px)
+		line-height: .7
+		font-family: $fontTitle
+		position: relative
+		&::before
+			content: "$"
+			+fontRem(40px)
+			font-family: $fontText
+			position: absolute
+			left: -28px
+	&__billingPer
+		+fontRem(13px)
+		margin-left: 14px
+		font-family: $fontText
+		text-transform: uppercase
+		position: relative
+		&::before
+			content: "/"
+			line-height: 1.24
+			position: absolute
+			top: 0
+			left: -10px
+	&__details
+		margin-bottom: 4px
+	&__item
+		+paddingEm(25px, 0, 25px, 0)
+		color: #808080
+	&__item:not(:last-child)
+		border-bottom: 1px solid #f0f0f0
+	&__text
+		position: relative
+		&::before
+			content: ">"
+			position: absolute
+			top: 0
+			left: -14px
+			line-height: 1.24
+	&__btn
+		display: block
+		width: 100%
+		+paddingEm(18px, 0, 16px, 0)
+		+fontRem(14px)
+		font-family: $fontTitle
+		color: $textColorBlack
+		background-color: #fff
+

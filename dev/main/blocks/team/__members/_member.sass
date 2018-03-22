@@ -1,0 +1,53 @@
+.member
+	+col()
+	+size-lg(4)
+	&__name
+		+fontRem(16px)
+	&__info
+		+paddingRem(0, 24px, 0, 24px)
+		background-color: #ebebeb	
+	&__infoItem
+		display: block
+		+paddingRem(24px, 0, 24px, 0)
+		text-align: center
+	&__infoItem:not(:last-child)
+		border-bottom: 1px dashed $borderColor
+	&__position
+		+fontRem(11px)
+	&__img
+		margin-bottom: 8px
+	img
+		width: 100%
+		height: auto
+
+	&__details
+		+paddingRem(96px, 24px, 0, 24px)
+		text-align: center
+		background-color: $mainColor
+		color: #000
+	&__detailsName
+		+marginRem(0, 0, 23px, 0)
+		font-family: $fontTitle
+		+fontRem(24px)
+		font-weight: bold	
+		text-transform: uppercase 
+	&__detailsPos
+		@extend .member__detailsName
+		+fontRem(16px)
+	&__detailsText
+		+marginRem(76px, 0, 124px, 0)
+		+paddingRem(0, 16px, 0, 16px)
+		font-family: $fontText
+		line-height: 1.71
+		+fontRem(14px)
+	&__detailsSocial
+		+paddingRem(40px, 34px, 50px, 34px)
+		border-top: 1px dashed $borderColor
+	&__socialLink
+		fill: rgba(0, 0, 0, .5)
+
+
+
+
+
+

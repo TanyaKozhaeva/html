@@ -1,0 +1,18 @@
+mixin member(data)
+	each i in data
+		.member
+			.member__mainInfo
+				picture.member__img
+					source(srcset= i.img.srcset)
+					img(src= i.img.default, alt= i.name)
+				.member__info
+					span.member__infoItem.member__name.subtitle.subtitle_size_smaller= i.name
+					span.member__infoItem.member__position.subtitle= i.position
+			.member__details
+				.member__detailsName= i.name
+				.member__detailsPos= i.position
+				.member__detailsText= i.text
+				.member__detailsSocial.social
+					each j in i.social
+						a(href= j.adrss).social__link
+							+icon(j.name," member__socialLink")

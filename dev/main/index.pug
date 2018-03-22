@@ -1,0 +1,43 @@
+extends main
+
+block title
+	| Главная страница
+
+block content
+	.debug
+		div
+			div
+				div
+				div
+				div
+				div
+				div
+				div
+				div
+				div
+				div
+				div
+				div
+				div
+	include blocks/mainScreen/mainScreen
+	include blocks/about/about
+	include blocks/purchaseBlock/purchaseBlock
+	include blocks/features/__featuresList/featuresList
+	include blocks/features/features
+	include blocks/gallery/gallery
+	include blocks/service/service
+	include blocks/pricing/__plans/plan
+	include blocks/pricing/pricing
+	include blocks/team/__members/member
+	include blocks/team/team
+	include blocks/form/form
+
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="../static/img/svg/symbol/sprite.svg#" + name)
+
+
+
+	

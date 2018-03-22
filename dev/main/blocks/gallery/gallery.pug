@@ -1,0 +1,12 @@
+mixin caseDescr(name)
+	.case__descr
+		span.case__title Fulwidth slides
+		span.case__name= name
+		button.case__btn
+
+.cases
+	.case.case_fashion
+		+caseDescr("Fashion")
+	.case.case_travel
+		+caseDescr("Travel")
+

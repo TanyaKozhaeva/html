@@ -1,0 +1,22 @@
+.title
+	position: relative
+	line-height: .7
+	text-transform: uppercase
+	text-align: center
+	&_align_left
+			text-align: left
+	&__item
+		&_main
+			width: 100%
+			+fontRem(30px)
+			font-family: $fontTitle
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			color: $textColorBlack
+			font-weight: 900
+		&_behind
+			+fontRem(91px)
+			font-family: $fontSubtitle
+			color: #f0f0f0

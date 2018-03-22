@@ -1,0 +1,14 @@
+mixin plan(data)
+	each i in data
+		.plan
+			header.plan__header
+				h3.plan__title= i.header.name
+				.plan__priceBlock
+					span.plan__price= i.header.price
+					span.plan__billingPer Month
+				p.plan__descr.text= i.header.descr
+			ul.plan__details
+				each j in i.list
+					li.plan__item
+						span.plan__text.text= j
+			button.plan__btn Get started now

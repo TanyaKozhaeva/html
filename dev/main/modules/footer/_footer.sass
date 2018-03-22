@@ -1,0 +1,37 @@
+.footer
+	+paddingRem(64px, 0, 70px, 0)
+	text-align: center
+	background-color: $mainColorBlack
+	&__phone
+		+col()
+		+size-lg(3)
+	&__social
+		+col()
+		+size-lg(4)
+		+shift-lg(1)
+		+paddingRem(0, 36px, 0, 36px)
+	&__adress
+		+col()
+		+size-lg(3)
+
+.phone
+	&__link
+		display: block
+		width: 3.25rem
+		height: 3.25rem
+		box-sizing: border-box
+		+paddingRem(12px, 12px, 12px, 12px)
+		border: 1px solid $borderColor
+		margin: 0 auto 2.06rem
+		border-radius: 50%
+		background-color: rgba(255, 255, 255, .1)
+	&__info
+		color: #fff
+.adress
+	&__link
+		@extend .phone__link
+	&__info
+		@extend .phone__info
+
+
+

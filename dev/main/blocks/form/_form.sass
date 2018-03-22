@@ -1,0 +1,29 @@
+.contactBlock
+	&__form
+		+row-flex()
+.form
+	&__input
+		+col()
+		+size-lg(6)
+		display: inline-block
+		margin-bottom: 1.3125rem
+	&__textarea
+		+col()
+		+size-lg(12)
+		min-height: 31.8125rem
+		margin-bottom: 1.5625rem
+	&__input,
+	&__textarea
+		+paddingRem(23px, 0, 25px, 20px)
+		border: 1px solid $borderColor
+		font-family: $fontText
+	&__input::placeholder,
+	&__textarea::placeholder	
+		color: $textColorBlack
+		opacity: 1
+	&__btn
+		margin-left: $offset_one_side
+		border: 1px solid $borderColor
+
+	
+

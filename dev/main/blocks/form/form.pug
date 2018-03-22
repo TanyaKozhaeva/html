@@ -1,0 +1,15 @@
+.contactBlock
+	.wrapper
+		+title({
+				"main": "Send us Message",
+				"behind": "Contact"
+			})(class = "contactBlock__title")
+		form(method="POST" action="#").form.contactBlock__form
+			input(type="text" name="firstName" placeholder="First Name (Required)").form__input
+			input(type="text" name="lastName" placeholder="Last Name (Required)").form__input
+			input(type="email" name="email" placeholder="Email (Required)").form__input
+			input(type="text" name="subject" placeholder="Subject").form__input
+			textarea(name="message" placeholder="Type your massage").form__textarea
+			+button({
+				"text": "Send"
+			})(class = "form__btn btn_color_main btn_size_xs btn_textTransform")(type="submit")
