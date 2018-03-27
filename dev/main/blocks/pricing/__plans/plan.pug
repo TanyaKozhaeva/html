@@ -1,7 +1,9 @@
 mixin plan(data)
 	each i in data
 		.plan
-			header.plan__header
+			if i.header.name=="Premium"
+				span.plan__popular.text Most popular
+			header.plan__header(class=`plan__header_${i.header.name.toLowerCase()}`)
 				h3.plan__title= i.header.name
 				.plan__priceBlock
 					span.plan__price= i.header.price

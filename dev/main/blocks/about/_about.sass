@@ -1,8 +1,42 @@
+.about
+	+paddingRem(98px, 0, 73px, 0)
+	text-align: center
+	position: relative
+	&__title
+		+marginRem(0, 0, 37px, 0)
+	&__text
+		+marginRem(0, 0, 71px, 0)
+		+col
+		+size-lg(10)
+		+shift-lg-left-offset(1)
+	&__controls
+		+marginRem(0, 0, 83px, 0)
+	&__advantages
+		margin-bottom: 5.75rem
+	&__num
+		+wrapper
+		padding-top: 5.75rem
+		padding-bottom: 4.5625rem
+	&__numTitle
+		+marginRem(0, 0, 124px, 0)
+		text-transform: uppercase
+	&::before
+		content: "O"
+		display: block
+		font-family: $fontTitle
+		+fontRem(1397.88px)
+		position: absolute
+		top: 5.5rem
+		left: -50%
+		line-height: .75
+		color: $mainColor
+		z-index: -1
+
 .advantage
 	+col()
 	+size-lg(4)
 	text-align: center
-	color: #fff
+	color: $textColorLight
 	&_black
 		+paddingRem(81px, 27px, 130px, 27px)
 		background-color: $mainColorBlack
@@ -25,21 +59,17 @@
 		width: 104px
 		height: 104px
 		+marginRem(0, 0, 48px, 0)
-
 	&_loked
 		height: 127px
 		+marginRem(0, 0, 44px, 0)
 
 
 
-.about__num
-	+wrapper
 .numPanel
 	+row-flex
 	justify-content: space-between
+	+paddingRem(0, 20px, 0, 36px)
 .numItem
 	&__val
 		font-family: $fontTitle
 		+fontRem(46px)
-
-

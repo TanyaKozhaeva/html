@@ -16,7 +16,7 @@
 		.about__advantages.row
 			.advantage.advantage_black
 				div.advantage__icon.advantage__icon_star
-					+icon('star', 'color_main')
+					+icon('star-half', 'color_main')
 				div.advantage__title Responsive design
 			.advantage.advantage_light
 				span.advantage__icon.advantage__icon_internet
@@ -28,10 +28,7 @@
 					+icon('locked', 'color_main')
 				div.advantage__title Powerful security
 		section.about__num
-			+title({
-					"main": "HERE’RE SOME IMPRESSIVE NUMBERS ABOUT US",
-					"behind": null
-				})(class = "")
+			h2.about__numTitle.title__main Here’re some impressive numbers about us
 			.numPanel
 				.numItem
 					.numItem__val 7533
@@ -45,4 +42,3 @@
 				.numItem
 					.numItem__val 100%
 					p.numItem__text.text Positive Feedback
-

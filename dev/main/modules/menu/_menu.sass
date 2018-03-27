@@ -1,0 +1,12 @@
+.nav
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  &__link
+    +fontRem(14px)
+    font-family: $fontLight
+    text-transform: uppercase
+    color: $textColorLight
+    transition: .5s ease-in-out
+    &:hover
+      color: $mainColor

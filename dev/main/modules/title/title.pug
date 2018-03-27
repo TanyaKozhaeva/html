@@ -1,5 +1,5 @@
 mixin title(data)
 	.title&attributes(attributes)
-		h2.title__item.title__item_main= data.main
+		h2.title__main.title__main_pos_absolute= data.main
 		if data.behind
-			span.title__item.title__item_behind= data.behind
+			span.title__behind= data.behind

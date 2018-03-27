@@ -1,3 +1,21 @@
 .pricing
-	&__plans
-		+row-flex()
+	+paddingRem(106px, 0, 109px, 0)
+	position: relative
+	background-color: $mainColor
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: url(../../static/img/general/pricingBg-1920w.jpg) center no-repeat
+		background-size: cover
+		opacity: .55
+		mix-blend-mode: multiply
+	&__title
+		+marginRem(0, 0, 142px, 0)
+		.title__behind
+			color: #444444
+			opacity: .3

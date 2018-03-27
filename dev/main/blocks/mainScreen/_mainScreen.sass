@@ -2,18 +2,30 @@
 	//display: flex
 	//align-items: center
 	+paddingRem(503px, 0, 333px, 0)
+	overflow: hidden
 	background-color:#fcfcfc
 	position: relative
+	// &::before
+	// 	content: ""
+	// 	display: block
+	// 	width: 46.5rem
+	// 	height: 47.25rem
+	// 	box-shadow: inset 0 0 0 9rem $mainColor
+	// 	border-radius: 50%
+	// 	position: absolute
+	// 	top: 3.25rem
+	// 	right: -4.31rem
 	&::before
-		content: ""
+		content: "O"
 		display: block
-		width: 46.5rem
-		height: 47.25rem
-		box-shadow: inset 0 0 0 9rem $mainColor
-		border-radius: 50%
+		font-family: $fontTitle
+		+fontRem(900px)
 		position: absolute
 		top: 3.25rem
-		right: -4.31rem	
+		right: -4.31rem
+		line-height: .75
+		color: $mainColor
+
 	&::after
 		content: ""
 		display: block
@@ -22,7 +34,7 @@
 		position: absolute
 		right: 10.7%
 		bottom: 0
-		background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat 
+		background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat
 		background-size: cover
 
 
@@ -43,12 +55,12 @@
 		&::before
 			content: ""
 			display: block
-			width: 198px
-			height: 198px
+			width: 12.375rem
+			height: 12.375rem
 			border-radius: 50%
 			position: absolute
-			top: -24px
-			left: -24px
+			top: -1.5rem
+			left: -1.5rem
 			z-index: -1
 			background-color: $mainColor
 
@@ -58,7 +70,21 @@
 		margin-bottom: 1.5625rem
 		line-height: 1.85
 		letter-spacing: 0.5px
+		position: relative
+		&::before
+			content: "C"
+			display: block
+			font-family: $fontTitle
+			+fontRem(268.25px)
+			width: 6.9375rem
+			overflow: hidden
+			position: absolute
+			top: 3.8125rem
+			right: 1.6875rem
+			line-height: .75
+			color: $mainColor
+
+
+
 	&__btn
 		display: block
-
-

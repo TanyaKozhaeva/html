@@ -2,9 +2,13 @@
 	+debug(rgba(0, 0, 0, .3), 1px solid red)
 	display: none
 .wrapper
-	+wrapper()
+	+wrapper
 .row
-	+row-flex()
+	+row-flex
+
+.logo
+	img
+		vertical-align: middle
 .text
 	font-family: $fontText
 	+fontRem(13px)
@@ -22,7 +26,7 @@
 .subtitle
 	font-family: $fontTitle
 	+fontRem(18px)
-	font-weight: bold	
+	font-weight: bold
 	text-transform: uppercase
 	color: $textColorBlack
 	&_size_smaller

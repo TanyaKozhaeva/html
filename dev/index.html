@@ -27,12 +27,6 @@
         </div>
       </div>
     </div>
-    <header class="header">
-      <div class="header__logo logo"></div>
-      <div class="header__nav">
-        <nav class="nav"><a class="nav__link" href="#">Home</a><a class="nav__link" href="#">Service</a><a class="nav__link" href="#">About</a><a class="nav__link" href="#">Portfolio</a><a class="nav__link" href="#">Page</a><a class="nav__link" href="#">Contact</a></nav>
-      </div>
-    </header>
     <div class="debug">
       <div>
         <div>
@@ -58,10 +52,24 @@
             <button class="btn mainScreen__btn btn_color_clear btn_size_s btn_textTransform">Contact us</button>
       </div>
     </div>
+    <header class="header">
+      <div class="wrapper">
+        <div class="row">
+          <div class="header__logo logo">
+            <picture class="member__img">
+              <source srcset="static/img/general/logo.png, static/img/general/logo-2x.png"><img src="static/img/general/logo.png" alt="Marvel">
+            </picture>
+          </div>
+          <div class="header__nav">
+            <nav class="nav"><a class="nav__link" href="#">Home</a><a class="nav__link" href="#">Service</a><a class="nav__link" href="#">About</a><a class="nav__link" href="#">Portfolio</a><a class="nav__link" href="#">Page</a><a class="nav__link" href="#">Contact</a></nav>
+          </div>
+        </div>
+      </div>
+    </header>
     <div class="about">
       <div class="wrapper">
             <div class="title about__title">
-              <h2 class="title__item title__item_main">This is the one page polo</h2><span class="title__item title__item_behind">About</span>
+              <h2 class="title__main title__main_pos_absolute">This is the one page polo</h2><span class="title__behind">About</span>
             </div>
         <div class="about__text text text_size_m">Molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu ente. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.do eiusmod tempor incididunt ut dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitationconsequat. </div>
         <div class="about__controls">
@@ -71,8 +79,8 @@
         <div class="about__advantages row">
           <div class="advantage advantage_black">
             <div class="advantage__icon advantage__icon_star">
-              <svg class="icon icon-star color_main">
-                <use xlink:href="../static/img/svg/symbol/sprite.svg#star"></use>
+              <svg class="icon icon-star-half color_main">
+                <use xlink:href="../static/img/svg/symbol/sprite.svg#star-half"></use>
               </svg>
             </div>
             <div class="advantage__title">Responsive design</div>
@@ -92,9 +100,7 @@
           </div>
         </div>
         <section class="about__num">
-              <div class="title">
-                <h2 class="title__item title__item_main">HERE’RE SOME IMPRESSIVE NUMBERS ABOUT US</h2>
-              </div>
+          <h2 class="about__numTitle title__main">Here’re some impressive numbers about us</h2>
           <div class="numPanel">
             <div class="numItem">
               <div class="numItem__val">7533</div>
@@ -117,42 +123,51 @@
       </div>
     </div>
     <div class="purchase">
-      <div class="wrapper">
+      <div class="wrapper purchase__wrap">
+            <div class="title purchase__title title_align_left">
+              <h2 class="title__main title__main_pos_absolute">Boost Your Website</h2><span class="title__behind">Responsive</span>
+            </div>
         <div class="row">
-              <div class="title purchase__title title_align_left">
-                <h2 class="title__item title__item_main">Boost Your Website</h2><span class="title__item title__item_behind">Responsive</span>
-              </div>
           <div class="purchase__promo">
             <p class="purchase__text text text_size_m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etia fermentum vel libero eget interdum semper libero. </p>
             <ul class="purchase__list list text text_size_m">
               <li class="list__item">
-                <div class="list__icon"></div>
+                <svg class="icon icon-star list__icon">
+                  <use xlink:href="../static/img/svg/symbol/sprite.svg#star"></use>
+                </svg>
                 <div class="list__text">Responsive Design & Retina Ready.</div>
               </li>
               <li class="list__item">
-                <div class="list__icon"></div>
+                <svg class="icon icon-star list__icon">
+                  <use xlink:href="../static/img/svg/symbol/sprite.svg#star"></use>
+                </svg>
                 <div class="list__text">Business Solution Any Company.</div>
               </li>
               <li class="list__item">
-                <div class="list__icon"></div>
+                <svg class="icon icon-star list__icon">
+                  <use xlink:href="../static/img/svg/symbol/sprite.svg#star"></use>
+                </svg>
                 <div class="list__text">Powerful Admin Panel.</div>
               </li>
               <li class="list__item">
-                <div class="list__icon"></div>
+                <svg class="icon icon-star list__icon">
+                  <use xlink:href="../static/img/svg/symbol/sprite.svg#star"></use>
+                </svg>
                 <div class="list__text">24/7 Support.</div>
               </li>
             </ul>
                 <button class="btn purchase__btn btn_color_main btn_size_xs btn_textTransform">Purchase</button>
           </div>
+          <div class="purchase__img"></div>
         </div>
       </div>
     </div>
     <div class="features">
       <div class="wrapper">
             <div class="title features__title">
-              <h2 class="title__item title__item_main">We're Creative Crafting With Love</h2><span class="title__item title__item_behind">Features</span>
+              <h2 class="title__main title__main_pos_absolute">We're Creative Crafting With Love</h2><span class="title__behind">Features</span>
             </div>
-        <div class="features__list">
+        <div class="features__list row">
               <div class="feature"><span class="feature__icon feature__icon_security">
                   <svg class="icon icon-padlock color_light">
                     <use xlink:href="../static/img/svg/symbol/sprite.svg#padlock"></use>
@@ -233,10 +248,10 @@
     </div>
     <div class="service">
       <div class="wrapper">
-            <div class="title service__title title_align_left">
-              <h2 class="title__item title__item_main">Clean idea and unique design</h2><span class="title__item title__item_behind">Service</span>
-            </div>
         <div class="row">
+              <div class="title service__title title_align_left">
+                <h2 class="title__main title__main_pos_absolute">Clean idea and unique design</h2><span class="title__behind">Service</span>
+              </div>
           <div class="service__advantages">
             <div class="row">
               <div class="serviceAdvantage"><span class="serviceAdvantage__icon">
@@ -271,15 +286,18 @@
           </div>
         </div>
       </div>
+      <picture class="service__teamPhoto">
+        <source srcset="../static/img/general/serviceTeam-885w.jpg, ../static/img/general/serviceTeam-1700w-2x.jpg 2x"><img src="../static/img/general/serviceTeam-885w.jpg" alt="Our service team">
+      </picture>
     </div>
     <div class="pricing">
       <div class="wrapper">
             <div class="title pricing__title">
-              <h2 class="title__item title__item_main">Choose your plan</h2><span class="title__item title__item_behind">Pricing</span>
+              <h2 class="title__main title__main_pos_absolute">Choose your plan</h2><span class="title__behind">Pricing</span>
             </div>
-        <div class="pricing__plans">
+        <div class="pricing__plans row">
               <div class="plan">
-                <header class="plan__header">
+                <header class="plan__header plan__header_standart">
                   <h3 class="plan__title">Standart</h3>
                   <div class="plan__priceBlock"><span class="plan__price">107</span><span class="plan__billingPer">Month</span></div>
                   <p class="plan__descr text">15 day free trial on all accounts</p>
@@ -295,8 +313,8 @@
                 </ul>
                 <button class="plan__btn">Get started now</button>
               </div>
-              <div class="plan">
-                <header class="plan__header">
+              <div class="plan"><span class="plan__popular text">Most popular</span>
+                <header class="plan__header plan__header_premium">
                   <h3 class="plan__title">Premium</h3>
                   <div class="plan__priceBlock"><span class="plan__price">433</span><span class="plan__billingPer">Month</span></div>
                   <p class="plan__descr text">15 day free trial on all accounts</p>
@@ -313,7 +331,7 @@
                 <button class="plan__btn">Get started now</button>
               </div>
               <div class="plan">
-                <header class="plan__header">
+                <header class="plan__header plan__header_ultimate">
                   <h3 class="plan__title">Ultimate</h3>
                   <div class="plan__priceBlock"><span class="plan__price">1233</span><span class="plan__billingPer">Month</span></div>
                   <p class="plan__descr text">15 day free trial on all accounts</p>
@@ -335,7 +353,7 @@
     <div class="team">
       <div class="wrapper">
             <div class="title team__title">
-              <h2 class="title__item title__item_main">Meet our team</h2><span class="title__item title__item_behind">Expert</span>
+              <h2 class="title__main title__main_pos_absolute">Meet our team</h2><span class="title__behind">Expert</span>
             </div>
         <div class="team__members row">
               <div class="member">
@@ -443,7 +461,7 @@
     <div class="contactBlock">
       <div class="wrapper">
             <div class="title contactBlock__title">
-              <h2 class="title__item title__item_main">Send us Message</h2><span class="title__item title__item_behind">Contact</span>
+              <h2 class="title__main title__main_pos_absolute">Send us Message</h2><span class="title__behind">Contact</span>
             </div>
         <form class="form contactBlock__form" method="POST" action="#">
           <input class="form__input" type="text" name="firstName" placeholder="First Name (Required)">

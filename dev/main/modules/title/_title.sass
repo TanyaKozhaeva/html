@@ -5,18 +5,19 @@
 	text-align: center
 	&_align_left
 			text-align: left
-	&__item
-		&_main
+	&__main
 			width: 100%
 			+fontRem(30px)
 			font-family: $fontTitle
-			position: absolute
-			bottom: 0
-			left: 50%
-			transform: translateX(-50%)
 			color: $textColorBlack
 			font-weight: 900
-		&_behind
+			&_pos_absolute
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+
+	&__behind
 			+fontRem(91px)
 			font-family: $fontSubtitle
 			color: #f0f0f0

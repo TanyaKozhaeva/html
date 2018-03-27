@@ -1,11 +1,51 @@
 .plan
 	+col()
 	+size-lg(4)
+	position: relative
 	text-align: center
 	&__header
 		+paddingEm(30px, 0, 39px, 0)
 		color: #fff
-		background-color: gray
+		background-color: #444444
+		position: relative
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			opacity: .2
+		&_standart
+			&::before
+				@extend .plan__header::before
+				background: url(../../static/img/general/planBg1-365w.jpg) center left no-repeat
+				background-size: cover
+		&_premium
+			&::before
+				@extend .plan__header::before
+				background: url(../../static/img/general/planBg2-365w.jpg) center left no-repeat
+				background-size: cover
+		&_ultimate
+			&::before
+				@extend .plan__header::before
+				background: url(../../static/img/general/planBg3-365w.jpg) center left no-repeat
+				background-size: cover
+
+
+
+
+	&__popular
+		position: absolute
+		top: 0
+		left: 0
+		transform: translateY(-100%)
+		width: 100%
+		+paddingEm(14px, 0, 14px, 0)
+		+fontEm(15px)
+		background-color: #e6e6e6
+
 	&__title
 		+fontRem(15px)
 		font-family: $fontText
@@ -38,8 +78,11 @@
 			position: absolute
 			top: 0
 			left: -10px
+	&__descr
+		color: inherit
 	&__details
 		margin-bottom: 4px
+		background-color: #fff
 	&__item
 		+paddingEm(25px, 0, 25px, 0)
 		color: #808080
@@ -61,4 +104,3 @@
 		font-family: $fontTitle
 		color: $textColorBlack
 		background-color: #fff
-
