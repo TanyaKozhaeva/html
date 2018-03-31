@@ -571,6 +571,108 @@
   .feature__text {
     margin-top: -10px; }
 
+.portfolio {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.portfolioPrev {
+  width: 25%;
+  height: 310px;
+  box-sizing: border-box;
+  position: relative; }
+  .portfolioPrev_travel {
+    background: url(../../static/img/content/portfolio/prev1-483w.jpg) bottom center no-repeat;
+    background-size: cover; }
+  .portfolioPrev_fashion {
+    background: url(../../static/img/content/portfolio/prev2-483w.jpg) center left no-repeat;
+    background-size: cover; }
+  .portfolioPrev_fantasy {
+    background: url(../../static/img/content/portfolio/prev3-483w.jpg) center no-repeat;
+    background-size: cover; }
+  .portfolioPrev_animate {
+    background: url(../../static/img/content/portfolio/prev4-483w.jpg) center no-repeat;
+    background-size: cover; }
+  .portfolioPrev_1 {
+    background: url(../../static/img/content/portfolio/prev5-483w.jpg) center no-repeat;
+    background-size: cover; }
+  .portfolioPrev_2 {
+    background: url(../../static/img/content/portfolio/prev6-483w.jpg) center no-repeat;
+    background-size: cover; }
+  .portfolioPrev_3 {
+    background: url(../../static/img/content/portfolio/prev7-483w.jpg) center no-repeat;
+    background-size: cover; }
+  .portfolioPrev_4 {
+    background: url(../../static/img/content/portfolio/prev8-483w.jpg) center no-repeat;
+    background-size: cover; }
+  .portfolioPrev__descr {
+    width: 100%;
+    padding: 1.625rem 1.9375rem 1.625rem 1.9375rem;
+    border: 1px solid #b7b7b7;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0; }
+  .portfolioPrev__name {
+    margin: 0 0 0 0.9375rem;
+    text-transform: uppercase;
+    position: relative; }
+  .portfolioPrev__controls {
+    width: 96px;
+    height: 20px;
+    border: 1px solid #b7b7b7;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    transform: translateY(-100%);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    background-color: inherit; }
+  .portfolioPrev__btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -22px; }
+    .portfolioPrev__btn_view {
+      right: 9px;
+      border: 1px solid #b7b7b7;
+      background-color: #ffe400; }
+    .portfolioPrev__btn_link {
+      left: 9px;
+      border: 1px solid #000;
+      background-color: #fff; }
+
+.fashion {
+  width: 50%;
+  height: 436px;
+  background-color: red; }
+
+.portfolioItem {
+  width: 40%;
+  margin: 0 auto;
+  padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+  border: 2px solid #ffe400;
+  background-color: #fff; }
+  .portfolioItem__title {
+    margin: 0 0 1.875em 0; }
+  .portfolioItem__slider {
+    width: 100%; }
+  .portfolioItem__pic img {
+    width: 100%;
+    height: 336px; }
+  .portfolioItem__prev img {
+    width: 100%;
+    height: 70px; }
+  .portfolioItem__text {
+    text-align: center;
+    color: #444444; }
+
+.slick-dots li button:before {
+  font-size: 2.5rem;
+  color: #757575; }
+
 .service {
   padding: 10.0625rem 0 4.5rem 0;
   position: relative;
@@ -826,13 +928,24 @@
 .member:hover .member__details {
   display: block; }
 
-.contactBlock__form {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px; }
+.contactBlock {
+  padding: 7.5rem 0 8.125rem 0;
+  background-color: #f0f0f0;
+  background-image: url(../../static/img/general/map-1920w.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .contactBlock__title {
+    margin: 0 0 10.875rem 0; }
+    .contactBlock__title .title__behind {
+      color: #e6e6e6; }
+  .contactBlock__form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px; }
 
 .form__input {
   box-sizing: border-box;

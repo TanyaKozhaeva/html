@@ -1,12 +1,37 @@
-mixin caseDescr(name)
-	.case__descr
-		span.case__title Fulwidth slides
-		span.case__name= name
-		button.case__btn
+mixin portfolioPrev(name)
+	.portfolioPrev(class=`portfolioPrev_${name.toLowerCase()}`)
+		.portfolioPrev__descr
+			span.portfolioPrev__title.subtitle Fulwidth slides
+			span.portfolioPrev__name.text= name
+			.portfolioPrev__controls
+				a(href=`#${name.toLowerCase()}`).portfolioPrev__popup
+					button.portfolioPrev__btn.portfolioPrev__btn_view
+						+icon("search")
+				button.portfolioPrev__btn.portfolioPrev__btn_link
+					+icon("link-symbol")
 
-.cases
-	.case.case_fashion
-		+caseDescr("Fashion")
-	.case.case_travel
-		+caseDescr("Travel")
+.portfolio
+		+portfolioPrev("Travel")
+		+portfolioPrev("Fashion")
+		+portfolioPrev("Fantasy")
+		+portfolioPrev("Animate")
+		+portfolioPrev("1")
+		+portfolioPrev("2")
+		+portfolioPrev("3")
+		+portfolioPrev("4")
+		
++portfolioItem([
+	{
+		"title": "Fashion",
+		"slider": [
+		"Fashion1",
+		"Fashion2",
+		"Fashion3",
+		"Fashion4",
+		"Fashion5"
+		],
+		"text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+	}
+])
 
+		//- .fashion#fashion.mfp-hide pepepepep

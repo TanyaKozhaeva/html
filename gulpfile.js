@@ -25,7 +25,7 @@ var gulp = require('gulp'),
 
 // SASS
 gulp.task('sass', function() {
-    
+
     return gulp.src([
         //.pipe(debug({title: 'sass:'}))
             'dev/main/main.sass',
@@ -48,7 +48,7 @@ gulp.task('sass', function() {
 
 // Pug
 gulp.task('pug', function() {
-    
+
     return gulp.src('dev/main/index.pug')
         .pipe(debug({title: 'pug:'}))
         .pipe(plumber())
@@ -75,7 +75,8 @@ gulp.task('scripts', function() {
     return gulp.src([
             // Библиотеки
             'dev/static/libs/jquery.mask.min.js',
-            'dev/static/libs/jquery.nicescroll.js',
+            'dev/static/libs/magnificPopUp.js',
+            //'dev/static/libs/jquery.nicescroll.js',
             'dev/static/libs/validate/jquery.validate.min.js'
         ])
         .pipe(concat('libs.min.js'))

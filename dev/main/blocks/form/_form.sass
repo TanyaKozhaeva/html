@@ -1,4 +1,15 @@
 .contactBlock
+	+paddingRem(120px, 0, 130px, 0)
+	background-color: #f0f0f0
+	background-image: url(../../static/img/general/map-1920w.png)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+	&__title
+		+marginRem(0, 0, 174px, 0)
+		.title__behind
+			color: #e6e6e6
 	&__form
 		+row-flex()
 .form
@@ -18,12 +29,9 @@
 		border: 1px solid $borderColor
 		font-family: $fontText
 	&__input::placeholder,
-	&__textarea::placeholder	
+	&__textarea::placeholder
 		color: $textColorBlack
 		opacity: 1
 	&__btn
 		margin-left: $offset_one_side
 		border: 1px solid $borderColor
-
-	
-

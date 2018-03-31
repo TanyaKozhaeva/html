@@ -13,10 +13,10 @@ document.body.onload = function(){
 
 //SCROLL
 (function (){
-    $('.nav__link').click( function(e){ 
-  var scroll_el = $(this).attr('href'); 
-        //if ($(scroll_el).length != 0) { 
-      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1500); 
+    $('.nav__link').click( function(e){
+  var scroll_el = $(this).attr('href');
+        //if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1500);
        // }
       return false;
     });
@@ -97,10 +97,9 @@ $('#formNewsletter').on('submit', function(){
     focusCleanup: true,
     focusInvalid: false
   });
-   
+
     if($(formID).valid()){
           var data = $(this).serialize();
-    console.log(data);
     $.ajax({
       type: 'POST',
       url: 'http://jsonplaceholder.typicode.com/posts',
@@ -113,13 +112,53 @@ $('#formNewsletter').on('submit', function(){
         $('#formNewsletter').addClass('form_error')
       }
     })
-    } 
+    }
     return false
 })
+//SLICK
+//
+// $('.slider-for').slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   fade: true,
+//   asNavFor: '.slider-nav'
+// });
+// $('.slider-nav').slick({
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   asNavFor: '.slider-for',
+//   arrows: false,
+//   dots: true,
+//   centerMode: true,
+//   focusOnSelect: true
+// });
 
 
-
-
-
-
-
+//PopUp
+$('.portfolioPrev__popup').magnificPopup({
+  type:'inline',
+  midClick: true,
+  callbacks: {
+    open: function() {
+      $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        lazyLoad: 'ondemand',
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        lazyLoad: 'ondemand',
+        asNavFor: '.slider-for',
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+      });
+    }
+  }
+});
