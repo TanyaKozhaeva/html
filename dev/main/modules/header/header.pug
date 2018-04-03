@@ -1,9 +1,36 @@
 header.header
 	.wrapper
-		.row
+		.row.header__row
 			.header__logo.logo
-				picture.member__img
+				picture.logo__img
 					source(srcset="static/img/general/logo.png, static/img/general/logo-2x.png")
 					img(src="static/img/general/logo.png", alt="Marvel")
-			.header__nav
-				include ../menu/menu
+			.header__navPanel
+				.dropdown.header__dropdown
+					span.dropdown__line
+				+nav([
+				{
+				"href": "#",
+				"text": "Home"
+				},
+				{
+				"href": "#",
+				"text": "Service"
+				},
+				{
+				"href": "#",
+				"text": "About"
+				},
+				{
+				"href": "#",
+				"text": "Portfolio"
+				},
+				{
+				"href": "#",
+				"text": "Page"
+				},
+				{
+				"href": "#",
+				"text": "Contact"
+				}
+				])(class = "header__nav")

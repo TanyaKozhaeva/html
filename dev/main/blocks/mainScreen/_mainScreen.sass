@@ -1,88 +1,86 @@
 .mainScreen
-	//display: flex
-	//align-items: center
-	+paddingRem(503px, 0, 333px, 0)
+	+paddingRem(183px, 20px, 108px, 20px)
 	overflow: hidden
 	background-color:#fcfcfc
 	position: relative
-	// &::before
-	// 	content: ""
-	// 	display: block
-	// 	width: 46.5rem
-	// 	height: 47.25rem
-	// 	box-shadow: inset 0 0 0 9rem $mainColor
-	// 	border-radius: 50%
-	// 	position: absolute
-	// 	top: 3.25rem
-	// 	right: -4.31rem
 	&::before
 		content: "O"
 		display: block
 		font-family: $fontTitle
-		+fontRem(900px)
+		+fontRem(500px)
 		position: absolute
-		top: 3.25rem
-		right: -4.31rem
+		top: .07em
+		left: 67.1%
 		line-height: .75
 		color: $mainColor
+		+sm-block
+			+fontRem(900px)
+	+sm-block
+		+paddingRem(503px, 20px, 333px, 20px)
+	+md-block
+		&::after
+			content: ""
+			display: block
+			width: 33.875rem
+			height: 58.5rem
+			position: absolute
+			left: 67.1%
+			bottom: 0
+			background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat
+			background-size: cover
 
-	&::after
-		content: ""
-		display: block
-		width: 33.875rem
-		height: 58.5rem
-		position: absolute
-		right: 10.7%
-		bottom: 0
-		background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat
-		background-size: cover
+
 
 
 	&__row
 		flex-direction: column
 
 	&__title
-		margin-bottom: 5.5625rem
+		margin-bottom: 1.233em
 		font-family: $fontSubtitle
 		color: $textColorBlack
-		+fontRem(60px)
+		+fontEm(45px)
+		line-height: 1.1
 		text-transform: uppercase
 		font-weight: 900
 		position: relative
 		z-index: 1
 		span
 			display: block
+		+xs-block
+			+fontEm(60px)
 		&::before
 			content: ""
 			display: block
-			width: 12.375rem
-			height: 12.375rem
+			width: 3.3em
+			height: 3.3em
 			border-radius: 50%
 			position: absolute
-			top: -1.5rem
-			left: -1.5rem
+			top: -0.4em
+			left: -0.4em
 			z-index: -1
 			background-color: $mainColor
 
 	&__promo
-		width: 67.1%
-		+fontRem(13px)
-		margin-bottom: 1.5625rem
+		width: 100%
+		+fontEm(13px)
+		margin-bottom: 1.35em
 		line-height: 1.85
-		letter-spacing: 0.5px
 		position: relative
-		&::before
-			content: "C"
-			display: block
-			font-family: $fontTitle
-			+fontRem(268.25px)
-			width: 6.9375rem
-			overflow: hidden
-			position: absolute
-			top: 3.8125rem
-			right: 1.6875rem
-			line-height: .75
-			color: $mainColor
+		+xs-block
+			width: 67.1%
+			&::before
+				content: "C"
+				display: block
+				font-family: $fontTitle
+				+fontRem(268.25px)
+				width: 6.9375rem
+				overflow: hidden
+				position: absolute
+				top: 5.5rem
+				right: 1.6875rem
+				line-height: .75
+				color: $mainColor
 
 
 

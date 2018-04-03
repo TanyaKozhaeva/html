@@ -1,6 +1,6 @@
 mixin feature(data)
 	each item in data.items
-		.feature
+		.feature.features__item
 			span.feature__icon(class=`feature__icon_${item.class}`)
 				+icon(item.icon, 'color_light')
 			.feature__title.subtitle= item.title

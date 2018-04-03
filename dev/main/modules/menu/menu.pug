@@ -1,9 +1,4 @@
-nav.nav
-		a.nav__link(href="#") Home
-		a.nav__link(href="#") Service
-		a.nav__link(href="#") About
-		a.nav__link(href="#") Portfolio
-		a.nav__link(href="#") Page
-		a.nav__link(href="#") Contact
-		
-
+mixin nav(data)
+	nav.nav&attributes(attributes)
+		each i in data
+			a.nav__link(href= i.href)= i.text

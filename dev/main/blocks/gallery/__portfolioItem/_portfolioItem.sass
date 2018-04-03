@@ -1,26 +1,79 @@
 .portfolioItem
   width: 40%
   margin: 0 auto
+  position: relative
   +paddingRem(30px, 30px, 30px, 30px)
   border: 2px solid $mainColor
   background-color: #fff
   &__title
-    +marginEm(0, 0, 30px, 0)
+    +marginRem(0, 0, 30px, 0)
   &__slider
     width: 100%
 
+
   &__pic
-    img
       width: 100%
       height: 336px
+      &_1
+        background: url(../../static/img/content/portfolio/prev1-966w-2x.jpg) center no-repeat
+        background-size: cover
+      &_2
+        background: url(../../static/img/content/portfolio/prev2-966w-2x.jpg) center no-repeat
+        background-size: cover
+      &_3
+        background: url(../../static/img/content/portfolio/prev3-966w-2x.jpg) center no-repeat
+        background-size: cover
+      &_4
+        background: url(../../static/img/content/portfolio/prev4-966w-2x.jpg) center no-repeat
+        background-size: cover
+      &_5
+        background: url(../../static/img/content/portfolio/prev5-966w-2x.jpg) center no-repeat
+        background-size: cover
+
   &__prev
-    img
       width: 100%
       height: 70px
+      &_1
+        background: url(../../static/img/content/portfolio/prev1-483w.jpg) center no-repeat
+        background-size: cover
+      &_2
+        background: url(../../static/img/content/portfolio/prev2-483w.jpg) center no-repeat
+        background-size: cover
+      &_3
+        background: url(../../static/img/content/portfolio/prev3-483w.jpg) center no-repeat
+        background-size: cover
+      &_4
+        background: url(../../static/img/content/portfolio/prev4-483w.jpg) center no-repeat
+        background-size: cover
+      &_5
+        background: url(../../static/img/content/portfolio/prev5-483w.jpg) center no-repeat
+        background-size: cover
+
   &__text
     text-align: center
     color: $textColorBlack
+  &__close
+    width: 2.75rem
+    height: 2.75rem
+    border: 1px solid #fff
+    position: absolute
+    top: -1rem
+    right: -1rem
+    border-radius: 100%
+    background-color: $mainColor
+    &::before
+      content: "X"
+      display: block
+      +fontRem(20px)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      color: #fff
+
 
 .slick-dots li button:before
   +fontRem(40px)
   color: $textColor
+.mfp-arrow
+  background-color: $mainColor

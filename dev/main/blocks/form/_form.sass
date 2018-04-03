@@ -13,19 +13,26 @@
 	&__form
 		+row-flex()
 .form
-	&__input
-		+col()
-		+size-lg(6)
-		display: inline-block
+	&__field
+		+col
+		+size-xs(12)
+		+size-sm(6)
 		margin-bottom: 1.3125rem
+		position: relative
+		&_textarea
+			+col()
+			+size-xs(12)
+			margin-bottom: 1.1rem
+	&__input
+		display: inline-block
+		width: 100%
 	&__textarea
-		+col()
-		+size-lg(12)
+		width: 100%
 		min-height: 31.8125rem
-		margin-bottom: 1.5625rem
+
 	&__input,
 	&__textarea
-		+paddingRem(23px, 0, 25px, 20px)
+		+paddingRem(23px, 0, 21px, 20px)
 		border: 1px solid $borderColor
 		font-family: $fontText
 	&__input::placeholder,
@@ -33,5 +40,14 @@
 		color: $textColorBlack
 		opacity: 1
 	&__btn
+		min-width: 147px
 		margin-left: $offset_one_side
 		border: 1px solid $borderColor
+
+.error
+	color: #B84747
+label.error
+	position: absolute
+	left: 0
+	bottom: 0
+	transform: translateY(100%)

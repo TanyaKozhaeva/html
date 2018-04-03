@@ -3,28 +3,37 @@
 	text-align: center
 	position: relative
 	&__title
-		+marginRem(0, 0, 37px, 0)
+		margin-bottom: 1.81em
 	&__text
-		+marginRem(0, 0, 71px, 0)
 		+col
-		+size-lg(10)
-		+shift-lg-left-offset(1)
+		+size-xs(10)
+		+shift-xs-left(1)
+		margin-bottom: 4.187em
 	&__controls
 		+marginRem(0, 0, 83px, 0)
+	&__btn
+		margin-right: $offset_one_side
 	&__advantages
-		margin-bottom: 5.75rem
+		margin-bottom: 3.875rem
+		justify-content: center
+	&__advantage
+		+col
+		+size(12)
+		+size-xs(6)
+		+size-md(4)
+		margin-bottom: $offset
 	&__num
 		+wrapper
-		padding-top: 5.75rem
+		padding-top: 5.4rem
 		padding-bottom: 4.5625rem
 	&__numTitle
-		+marginRem(0, 0, 124px, 0)
+		margin-bottom: 3.83em
 		text-transform: uppercase
 	&::before
 		content: "O"
 		display: block
 		font-family: $fontTitle
-		+fontRem(1397.88px)
+		+fontRem(1398px)
 		position: absolute
 		top: 5.5rem
 		left: -50%
@@ -33,35 +42,33 @@
 		z-index: -1
 
 .advantage
-	+col()
-	+size-lg(4)
 	text-align: center
 	color: $textColorLight
 	&_black
 		+paddingRem(81px, 27px, 130px, 27px)
 		background-color: $mainColorBlack
 	&_light
-		+paddingRem(56px, 27px, 76px, 27px)
+		+paddingRem(56px, 16px, 56px, 16px)
 		background-color: $mainColor
 	&__title
 		font-family: $fontTitle
-		+fontRem(22px)
+		+fontEm(22px)
 		&_marg
-			+marginRem(0, 0, 39px, 0)
+			margin-bottom: 1.272em
 
 .advantage__icon
 	display: inline-block
 	&_star
 		width: 111px
 		height: 103px
-		+marginRem(11px, 0, 56px, 0)
+		+marginRem(10px, 0, 56px, 0)
 	&_internet
 		width: 104px
 		height: 104px
-		+marginRem(0, 0, 48px, 0)
+		+marginRem(0, 0, 44px, 0)
 	&_loked
 		height: 127px
-		+marginRem(0, 0, 44px, 0)
+		+marginRem(0, 0, 42px, 0)
 
 
 
@@ -72,4 +79,5 @@
 .numItem
 	&__val
 		font-family: $fontTitle
-		+fontRem(46px)
+		+fontEm(46px)
+		margin-bottom: 0.15em

@@ -72,10 +72,12 @@ $fields_sm: 15px
 =col-padding()
     word-wrap: break-word
     +col-offsets(padding)
-
 =size($n)
     $val: 100% / $columns * $n
-    width: #{calc(#{$val} - #{$offset})}
+    width: #{calc(#{$val} - #{$offset_xs})}
+=size-xs-max($n)
+    $val: 100% / $columns * $n
+    +xs-max(width, #{calc(#{$val} - #{$offset_xs})})
 
 =size-xs($n)
     $val: 100% / $columns * $n
@@ -232,6 +234,9 @@ $fields_sm: 15px
 
 =xs($name, $value)
     @media screen and (min-width: $break_xs)
+        #{$name}: $value
+=xs-max($name, $value)
+    @media screen and (max-width: $break_xs - 1)
         #{$name}: $value
 
 =xs-block()

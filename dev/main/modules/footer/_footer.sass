@@ -4,15 +4,23 @@
 	background-color: $mainColorBlack
 	&__phone
 		+col()
-		+size-lg(3)
+		+size-xs(6)
+		+size-sm(3)
+		order: 2
 	&__social
 		+col()
-		+size-lg(4)
-		+shift-lg(1)
-		+paddingRem(0, 36px, 0, 36px)
+		+size-xs(6)
+		+shift-xs-left(3)
+		+shift-xs-right(3)
+		+size-sm(4)
+		+shift-sm(1)
+		+paddingRem(16px, 36px, 0, 36px)
+		order: 1
 	&__adress
 		+col()
-		+size-lg(3)
+		+size-xs(6)
+		+size-sm(3)
+		order: 3
 
 .phone
 	&__link
@@ -22,7 +30,7 @@
 		box-sizing: border-box
 		+paddingRem(12px, 12px, 12px, 12px)
 		border: 1px solid $borderColor
-		margin: 0 auto 2.06rem
+		margin: 0 auto 1.7rem
 		border-radius: 50%
 		background-color: rgba(255, 255, 255, .1)
 	&__info
@@ -32,6 +40,3 @@
 		@extend .phone__link
 	&__info
 		@extend .phone__info
-
-
-

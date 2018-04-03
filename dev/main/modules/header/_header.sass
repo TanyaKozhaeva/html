@@ -2,11 +2,63 @@
   height: 80px
   line-height: 80px
   background-color: $mainColorBlack
+  position: relative
+  &__row
+    justify-content: space-between
   &__logo
-    +col()
-    +size-lg(3)
-  &__nav
-    +col()
-    +size-lg(9)
+    +col
+    +size(3)
+  &__navPanel
+    +col
+    +size-sm(9)
     +paddingRem(0, 38px, 0, 38px)
-    
+  &__nav
+    position: absolute
+    right: 0
+    padding: 0 3rem
+    background: $mainColorBlack
+    display: none
+    z-index: 1500
+    flex-flow: column
+    &_visible
+      display: flex
+    +sm-block
+      width: 100%
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+      position: static
+      padding: 0
+
+.dropdown
+  width: 35px
+  height: 100%
+  cursor: pointer
+  +sm-block
+    display: none
+.dropdown__line
+  display: inline-block
+  width: 100%
+  height: 1px
+  background-color: $mainColor
+  position: relative
+  &::before,
+  &::after
+    content: ""
+    @extend .dropdown__line
+    position: absolute
+  &::before
+    top: 10px
+  &::after
+    bottom: 10px
+.dropdown_closed
+  span
+    background-color: transparent
+    &::before
+      top: 0
+      transform-origin: 50% 50%
+      transform: rotate(45deg)
+    &::after
+      bottom: 0
+      transform-origin: 50% 50%
+      transform: rotate(135deg)

@@ -1,5 +1,5 @@
 //ПОЗИЦИОНИРОВАНИЕ
-	
+
 
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null)
@@ -10,28 +10,28 @@
   left: $left
 
 //РЕМЫ
-@function calculateRem($size) 
+@function calculateRem($size)
   $remSize: $size / 16px;
   @if $size == 0
     @return #{0}
   @else
     @return #{$remSize}rem
 
-//ШРИФТ REM 
+//ШРИФТ REM
 @mixin fontRem($size)
   font-size: calculateRem($size);
 
-//MARGIN REM 
+//MARGIN REM
 @mixin marginRem($top, $right: null, $bottom: null, $left: null)
   margin: calculateRem($top) calculateRem($right) calculateRem($bottom) calculateRem($left);
 
-//PADDING REM 
+//PADDING REM
 @mixin paddingRem($top, $right: null, $bottom: null, $left: null)
   padding: calculateRem($top) calculateRem($right) calculateRem($bottom) calculateRem($left);
 
 //ЕМ
 
-@function calculateEm($size) 
+@function calculateEm($size)
   $emSize: $size / 16px;
   @if $size == 0
     @return #{0}
@@ -49,23 +49,16 @@
   padding: calculateEm($top) calculateEm($right) calculateEm($bottom) calculateEm($left);
 
 
-//РАЗМЕР
-@mixin size($a, $b: false){
-width: $a
-@if $b == false
-	height: $a
+// //РАЗМЕР
+// @mixin size($a, $b: false){
+// width: $a
+// @if $b == false
+// 	height: $a
+//
+// @else
+// 	height: $b}
 
-@else
-	height: $b}
 
-
-@mixin rem($size)
-  $remSize: $size / 16px
-  @return #{$remSize}rem
 
 //@mixin rem($size)
   //@return ($size/16)rem
-
-
-
-

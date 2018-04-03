@@ -1,64 +1,66 @@
 .purchase
-
 	background-color: #fafafa
 	&__wrap
-		+paddingRem(170px, 0, 117px, 0)
+		padding-top: 10.625rem
+		padding-bottom: 7.3125rem
 		position: relative
 	&__title
 		//margin-left: $offset_lg_one_side
-		margin-bottom: 3.625rem
+		margin-bottom: 3.4em
+		z-index: 2
 		.title__main
-			+fontRem(26px)
+			+fontEm(26px)
 		.title__behind
-			+fontRem(72px)
+			+fontEm(72px)
 	&__promo
 		+col
-		+size-lg(6)
+		+size-xs(12)
+		+size-sm(6)
 	//	+shift-lg-right(6)
 	&__text
-		margin-bottom: 3.75rem
+		margin-bottom: 2.6em
 	&__list
-		+marginRem(0, 0, 36px, 0)
-	&__img
-		width: 50%
-		padding-left: 0
-		position: absolute
-		top: 109px
-		right: 0
-
-		&::after
-			content: "O"
-			display: block
-			font-family: $fontTitle
-			+fontRem(550px)
+		margin-bottom: 2em
+	+sm-block
+		&__img
+			width: 50%
 			position: absolute
-			top: 4.875rem
-			left: 2rem
+			top: 109px
+			right: 0
 			z-index: 1
-			line-height: .75
-			color: $mainColor
 
-		&::before
-			content: ""
-			display: block
-			width: 100%
-			height: 70vh
-			max-height: 466px
-			position: absolute
-			z-index: 2
-			background: url(../../static/img/general/manRun-581w.png) center top no-repeat
-			background-size: cover
+			&::after
+				content: "O"
+				display: block
+				font-family: $fontTitle
+				+fontEm(518px)
+				position: absolute
+				top: 3.875rem
+				left: .8rem
+				z-index: 1
+				line-height: .75
+				color: $mainColor
+
+			&::before
+				content: ""
+				display: block
+				width: 36.56em
+				height: 30.25em
+				max-height: 466px
+				position: absolute
+				z-index: 2
+				background: url(../../static/img/general/manRun-581w.png) center top no-repeat
+				background-size: cover
 
 	.list
 		&__item
-			padding: 12px 0 12px 30px
+			padding: 0.25em 0 0.25em 1.875rem
 			position: relative
 		&__icon
-			width: 16px
-			height: 16px
+			width: 1em
+			height: 1em
 			position: absolute
 			top: 50%
-			margin-top: -8px
+			margin-top: -0.5em
 			left: 0
 			fill: $textColor
-		&__text

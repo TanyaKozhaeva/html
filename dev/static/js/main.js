@@ -27,12 +27,12 @@ document.body.onload = function(){
 (function dropdown(){
     $('.dropdown').click(function(){
       $('.dropdown').toggleClass('dropdown_closed');
-     $('.nav').toggleClass('nav_active');
+     $('.header__nav').toggleClass('header__nav_visible');
     })
     $(document).mouseup(function(e) {
       var $target = $(e.target);
-      if ($target.closest('.nav').length == 0 && $target.closest('.dropdown').length == 0) {
-        $('.nav').removeClass('nav_active');
+      if ($target.closest('.header__nav').length == 0 && $target.closest('.dropdown').length == 0) {
+        $('.header__nav').removeClass('header__nav_visible');
         $('.dropdown').removeClass('dropdown_closed');
       }
     });
@@ -65,32 +65,38 @@ document.body.onload = function(){
 
 
 //FORM VALIDATE
-$('#formNewsletter').on('submit', function(){
+$('#contactForm').on('submit', function(){
   var formID = '#' + $(this).attr('id');
   $(formID).removeClass('form_success')
       $(formID).validate({
     rules: {
-      formName:{
+      firstName:{
         required: true
       },
-      formPhone:{
+      lastName:{
         required: true
       },
-      formEmail:{
+      email:{
         required: true,
         email: true
+      },
+      message:{
+        required: true
       }
     },
     messages: {
-      formName:{
+      firstName:{
         required: "Please enter your name"
       },
-      formPhone:{
-        required: "Please enter your phone number"
+      lastName:{
+        required: "Please enter your last name"
       },
-      formEmail:{
+      email:{
         required: "Please enter your email address",
         email: "Please enter a correct email address"
+      },
+      message:{
+        required: "Please enter your message"
       }
 
     },
@@ -105,7 +111,7 @@ $('#formNewsletter').on('submit', function(){
       url: 'http://jsonplaceholder.typicode.com/posts',
       data: data,
       success: function(data){
-        $('#formNewsletter').addClass('form_success')
+        $('#contactForm').addClass('form_success')
         $('.form__input').val('');
       },
       error: function(data){
@@ -115,50 +121,37 @@ $('#formNewsletter').on('submit', function(){
     }
     return false
 })
-//SLICK
-//
-// $('.slider-for').slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   fade: true,
-//   asNavFor: '.slider-nav'
-// });
-// $('.slider-nav').slick({
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   asNavFor: '.slider-for',
-//   arrows: false,
-//   dots: true,
-//   centerMode: true,
-//   focusOnSelect: true
-// });
 
-
-//PopUp
+//Pop UP
 $('.portfolioPrev__popup').magnificPopup({
-  type:'inline',
-  midClick: true,
-  callbacks: {
+  type: 'inline',
+  gallery:{
+    enabled:true,
+    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+    tPrev: 'Previous (Left arrow key)', // title for left button
+    tNext: 'Next (Right arrow key)', // title for right button
+    tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
+  },
+  callbacks:{
     open: function() {
-      $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        lazyLoad: 'ondemand',
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-      });
-      $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        lazyLoad: 'ondemand',
-        asNavFor: '.slider-for',
-        arrows: false,
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true
-      });
-    }
+          $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+          });
+          $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            lazyLoad: 'ondemand',
+            asNavFor: '.slider-for',
+            arrows: false,
+            dots: true,
+            centerMode: true,
+            focusOnSelect: true
+          });
+        }
   }
 });
