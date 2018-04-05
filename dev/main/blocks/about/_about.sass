@@ -12,20 +12,29 @@
 	&__controls
 		+marginRem(0, 0, 83px, 0)
 	&__btn
-		margin-right: $offset_one_side
+		//margin-right: $offset_one_side
+		+from(498px)
+			&:not(:last-child)
+				margin-right: $offset
+
 	&__advantages
-		margin-bottom: 3.875rem
+		margin-bottom: 4.5rem
 		justify-content: center
 	&__advantage
 		+col
 		+size(12)
 		+size-xs(6)
 		+size-md(4)
-		margin-bottom: $offset
-	&__num
+		margin-bottom: $fields
+	&__numbers
 		+wrapper
 		padding-top: 5.4rem
-		padding-bottom: 4.5625rem
+		padding-bottom: 2.5625rem
+	&__numItem
+		flex: 1 183px
+		margin-bottom: 2rem
+		// &:not(:last-child)
+		// 	margin-right: 2rem
 	&__numTitle
 		margin-bottom: 3.83em
 		text-transform: uppercase
@@ -33,13 +42,17 @@
 		content: "O"
 		display: block
 		font-family: $fontTitle
-		+fontRem(1398px)
+		+fontRem(698px)
 		position: absolute
-		top: 5.5rem
-		left: -50%
+		top: 0.13em
+		left: -.4em
 		line-height: .75
 		color: $mainColor
 		z-index: -1
+		+sm-block
+			+fontRem(998px)
+		+md-block
+			+fontRem(1198px)
 
 .advantage
 	text-align: center

@@ -1,16 +1,7 @@
 footer.footer
 	.wrapper
-		.row
-			.footer__phone.phone
-				a(href="tel:+123999000122233").phone__link
-					+icon('phone', 'color_light')
-				.phone__info.text.vcard
-					.fn.org 
-						span.value-title(title="Marvel")
-					.tel
-						span.value-title(title="+123(999) 	000-122-233") Phone : (999) 000-122-233
-
-			.footer__social.social
+		.row.footer__row
+			.footer__social.footer__item.social
 				a(href="#twtr").social__link
 					+icon('twtr', 'color_light')
 				a(href="#lnkdn").social__link
@@ -24,7 +15,16 @@ footer.footer
 				a(href="#apple").social__link
 					+icon('apple', 'color_light')
 
-			.footer__adress.agress
+			.footer__phone.footer__item.phone
+				a(href="tel:+123999000122233").phone__link
+					+icon('phone', 'color_light')
+				.phone__info.text.vcard
+					.fn.org 
+						span.value-title(title="Marvel")
+					.tel
+						span.value-title(title="+123(999) 	000-122-233") Phone : (999) 000-122-233
+
+			.footer__adress.footer__item.agress
 				a(href="#map").adress__link
 					+icon('adress', 'color_light')
 				.adress__info.text.vcard

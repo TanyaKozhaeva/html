@@ -1,5 +1,5 @@
 .pricing
-	+paddingRem(106px, 0, 109px, 0)
+	+paddingRem(106px, 0, 79px, 0)
 	position: relative
 	background-color: $mainColor
 	&::before
@@ -19,9 +19,15 @@
 		.title__behind
 			color: #444444
 			opacity: .3
+	&__plans
+		justify-content: center
 	&__plan
 		+col
 		+size(12)
 		+size-xs(6)
 		+size-sm(6)
 		+size-md(4)
+		margin-bottom: $offset
+		&_premium
+			+xs-block
+				margin-top: -41px

@@ -5,41 +5,56 @@
 	&__title
 		+marginEm(0, 0, 102px, 0)
 		+col
+		+size(12)
 		+size-lg(6)
 		+shift-lg-left(6)
 	&__advantages
 		+col()
 		+size-lg(6)
 		+shift-lg-left(6)
+		display: flex
+		flex-wrap: wrap
 	&__teamPhoto
 		width: 45%
 		height: auto
 		position: absolute
 		bottom: 0
 		left: 0
-	&::before
-		content: "O"
-		display: block
-		font-family: $fontTitle
-		+fontRem(1200px)
-		position: absolute
-		left: -26.5rem
-		bottom: -13rem
-		line-height: .75
-		color: $mainColor
-		opacity: .7
-		z-index: 2
+		display: none
+		img
+			width: 100%
+		+lg-block
+			display: inline-block
+			&::before
+				content: "O"
+				display: block
+				font-family: $fontTitle
+				+fontRem(1200px)
+				position: absolute
+				left: -0.35em
+				bottom: -0.17em
+				line-height: .75
+				color: $mainColor
+				opacity: .7
+				z-index: 2
 	&__advantage
-		width: 50%
-		box-sizing: border-box
-		border-top: 1px solid gray
-		&:nth-child(odd)
-			border-right: 1px solid #757575
-		&:nth-child(-n+2)
-			border-top: none
+		// +col
+		// +size(12)
+		// +size-xs(6)
+		width: 100%
+		&:not(:first-child)
+			border-top: 1px solid gray
+		+xs-block
+			width: 50%
+			&:nth-child(odd)
+				border-right: 1px solid #757575
+			&:nth-child(-n+2)
+				border-top: none
 
 .serviceAdvantage
 	+paddingEm(51px, 0, 60px, 0)
+	padding-left: $offset_one_side
+	padding-right: $offset_one_side
 	box-sizing: border-box
 	text-align: center
 	&__icon

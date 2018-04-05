@@ -15,20 +15,22 @@
 .form
 	&__field
 		+col
-		+size-xs(12)
+		+size(12)
 		+size-sm(6)
 		margin-bottom: 1.3125rem
 		position: relative
 		&_textarea
 			+col()
-			+size-xs(12)
+			+size(12)
 			margin-bottom: 1.1rem
 	&__input
 		display: inline-block
 		width: 100%
 	&__textarea
 		width: 100%
-		min-height: 31.8125rem
+		min-height: 18rem
+		+sm-block
+			min-height: 31.8125rem
 
 	&__input,
 	&__textarea

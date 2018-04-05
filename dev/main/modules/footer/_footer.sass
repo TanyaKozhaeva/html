@@ -1,26 +1,37 @@
 .footer
-	+paddingRem(64px, 0, 70px, 0)
+	+paddingEm(64px, 0, 70px, 0)
 	text-align: center
 	background-color: $mainColorBlack
+	&__row
+		justify-content: space-between
+	&__item
+		margin-bottom: 4em
+		+sm-block
+			margin-bottom: 0
+
 	&__phone
 		+col()
+		+size(12)
 		+size-xs(6)
 		+size-sm(3)
-		order: 2
+		+sm-block
+			order: 1
 	&__social
 		+col()
-		+size-xs(6)
-		+shift-xs-left(3)
-		+shift-xs-right(3)
+		+size(12)
+		+size-xs(10)
 		+size-sm(4)
-		+shift-sm(1)
 		+paddingRem(16px, 36px, 0, 36px)
-		order: 1
+		+sm-block
+			order: 2
 	&__adress
 		+col()
+		+size(12)
 		+size-xs(6)
 		+size-sm(3)
-		order: 3
+		+sm-block
+			order: 3
+
 
 .phone
 	&__link

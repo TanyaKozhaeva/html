@@ -1,9 +1,14 @@
 .team
-  +paddingRem(255px, 0, 356px, 0)
+  +paddingRem(255px, 0, 336px, 0)
   &__title
     +marginRem(0, 0, 128px, 0)
+  &__members
+    justify-content: center
   &__member
     +col()
-    +size-xs(12)
+    +size(12)
+    +size-xs(6)
     +size-sm(6)
     +size-md(4)
+    margin-bottom: $offset
+    // +size-md(4)

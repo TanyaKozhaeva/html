@@ -3,6 +3,9 @@
 	line-height: .7
 	text-transform: uppercase
 	text-align: center
+	font-size: .55rem
+	+xs-block
+		font-size: 1rem
 	&_align_left
 			text-align: left
 	&__main
@@ -16,7 +19,10 @@
 				position: absolute
 				bottom: 0
 				left: 50%
-				transform: translateX(-50%)
+				transform: translate(-50%, 50%)
+				+sm-block
+					transform: translate(-50%, 0)
+
 
 	&__behind
 			+fontEm(91px)
