@@ -11,7 +11,7 @@ mixin member(data)
 			.member__details
 				.member__detailsName= i.name
 				.member__detailsPos= i.position
-				.member__detailsText= i.text
+				p.member__detailsText= i.text
 				.member__detailsSocial.social
 					each j in i.social
 						a(href= j.adrss).social__link

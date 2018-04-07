@@ -3,11 +3,15 @@
     display: flex
     flex-wrap: wrap
 .portfolioPrev
-  flex: 1 320px
-  height: 310px
+  flex: 1 250px
+  height: 250px
   box-sizing: border-box
   position: relative
   overflow: hidden
+  +sm-block
+    flex: 1 320px
+    height: 310px
+
   &_travel
     background: url(../../static/img/content/portfolio/prev1-483w.jpg) bottom center no-repeat
     background-size: cover
@@ -61,6 +65,7 @@
   &__btn
     width: 34px
     height: 34px
+    padding: 7px
     border-radius: 100%
     position: absolute
     bottom: -22px

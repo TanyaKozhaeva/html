@@ -75,7 +75,8 @@ gulp.task('scripts', function() {
     return gulp.src([
             // Библиотеки
             'dev/static/libs/jquery.mask.min.js',
-            'dev/static/libs/magnificPopUp.js',
+            'dev/static/libs/magnific/jquery.magnific-popup.min.js',
+            'dev/static/libs/slick/slick.min.js',
             //'dev/static/libs/jquery.nicescroll.js',
             'dev/static/libs/validate/jquery.validate.min.js'
         ])
@@ -206,9 +207,9 @@ gulp.task('img', function() {
 
 // Сборка проекта
 
-gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
+gulp.task('build', ['clean', 'sass', 'scripts'], function() {
     var buildCss = gulp.src('dev/main/css/*.css')
-        .pipe(gulp.dest('product/static/css'));
+        .pipe(gulp.dest('product/main/css'));
 
     var buildFonts = gulp.src('dev/static/fonts/**/*')
         .pipe(gulp.dest('product/static/fonts'));
@@ -216,15 +217,11 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildJs = gulp.src('dev/static/js/**.js')
         .pipe(gulp.dest('product/static/js'));
 
+    var buildImg = gulp.src('dev/static/img/**/*')
+        .pipe(gulp.dest('product/static/img'));
+
     var buildHtml = gulp.src('dev/*.html')
         .pipe(gulp.dest('product/'));
-
-    var buildImg = gulp.src('dev/static/img/sprite/sprite.png')
-        .pipe(imagemin({
-            progressive: true,
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('product/static/img/sprite/'));
 });
 
 // Очистка кеша

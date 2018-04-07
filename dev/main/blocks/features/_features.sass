@@ -1,10 +1,14 @@
 .features
-	+paddingRem(126px, 0, 168px, 0)
+	+paddingRem(110px, 0, 128px, 0)
+	+sm-block
+		+paddingRem(126px, 0, 168px, 0)
+
 	&__title
 		+marginEm(0, 0, 137px, 0)
 	&__item
 		+col
+		+size(12)
 		+size-xs(6)
-		+size-sm(6)
 		+size-md(4)
-		margin-bottom: 4.25em
+		&:not(:last-child)
+			margin-bottom: 4.25em

@@ -15,10 +15,12 @@ html(lang="en")
 		link(rel="stylesheet" type='text/css' href="main/css/reset.css")
 		link(rel="stylesheet" type='text/css' href="static/fonts/fonts.css") 
 		link(rel="stylesheet" type='text/css' href="main/css/magnificPopup.css")
-		link(rel="stylesheet" type="text/css" href="../static/libs/slick/slick.css")
-		link(rel="stylesheet" type="text/css" href="../static/libs/slick/slick-theme.css")
+		link(rel="stylesheet" type="text/css" href="static/libs/slick/slick.css")
+		link(rel="stylesheet" type="text/css" href="static/libs/slick/slick-theme.css")
+		link(rel="stylesheet" type='text/css' href="main/css/perfetto.css")
 		link(rel="stylesheet" type='text/css' href="main/css/main.css")
-
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+		
 		title
 			block title
 	body
@@ -27,9 +29,12 @@ html(lang="en")
 		include modules/title/title
 		block content
 		include modules/footer/footer
-		script(src="../static/js/jquery.js")
-		script(src="../static/js/libs.min.js")
-		//script(src='../static/libs/magnificPopUp.js')
-		script(src="../static/libs/slick/slick.min.js")
-		script(src="../static/libs/magnific/jquery.magnific-popup.min.js")
-		script(src="../static/js/main.js")
+		
+		script(src="static/js/jquery.js")
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js')
+		script(src="static/js/libs.min.js")
+		script(src="static/js/pixelLayout.js") 
+		script(src="http://pixlayout.polycreative.ru/js/jquery.pixlayout.0.9.8.js")
+		script(src="static/js/main.js")
+	
+		

@@ -3,6 +3,8 @@
 	overflow: hidden
 	background-color:#fcfcfc
 	position: relative
+	+sm-block
+		+paddingRem(503px, 20px, 333px, 20px)
 	&::before
 		content: "O"
 		display: block
@@ -13,10 +15,9 @@
 		left: 67.1%
 		line-height: .75
 		color: $mainColor
+		// animation: rotate 2s infinite
 		+sm-block
 			+fontRem(900px)
-	+sm-block
-		+paddingRem(503px, 20px, 333px, 20px)
 	+md-block
 		&::after
 			content: ""
@@ -28,9 +29,6 @@
 			bottom: 0
 			background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat
 			background-size: cover
-
-
-
 
 	&__row
 		flex-direction: column
@@ -80,8 +78,15 @@
 				right: 1.6875rem
 				line-height: .75
 				color: $mainColor
-
-
-
 	&__btn
 		display: block
+// @keyframes rotate
+// 	0%
+// 		transform: translateX(-1%)
+// 		transform: translateY(4%)
+// 	50%
+// 		transform: translateX(5%)
+// 		transform: translateY(7%)
+// 	100%
+// 		transform: translateX(14%)
+// 		transform: translateY(0)

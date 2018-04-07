@@ -1,7 +1,9 @@
 .service
-	+paddingRem(161px, 0, 72px, 0)
+	+paddingRem(130px, 0, 72px, 0)
 	position: relative
 	overflow: hidden
+	+xs-block
+		padding-top: 10.06rem
 	&__title
 		+marginEm(0, 0, 102px, 0)
 		+col
@@ -10,6 +12,7 @@
 		+shift-lg-left(6)
 	&__advantages
 		+col()
+		+size(12)
 		+size-lg(6)
 		+shift-lg-left(6)
 		display: flex
@@ -26,15 +29,22 @@
 		+lg-block
 			display: inline-block
 			&::before
-				content: "O"
+				content: ""
 				display: block
-				font-family: $fontTitle
-				+fontRem(1200px)
+				box-sizing: border-box
+				width: 100%
+				height: 120%
+				border: 130px solid $mainColor
+				border-radius: 50%
+				// font-family: $fontTitle
+				// +fontRem(1200px)
 				position: absolute
-				left: -0.35em
-				bottom: -0.17em
-				line-height: .75
-				color: $mainColor
+				left: -40%
+				bottom: -30%
+				// left: -0.35em
+				// bottom: -0.17em
+				// line-height: .75
+				// color: $mainColor
 				opacity: .7
 				z-index: 2
 	&__advantage

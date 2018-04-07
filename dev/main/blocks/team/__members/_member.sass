@@ -21,15 +21,24 @@
 		height: auto
 
 	&__details
+		display: flex
+		flex-direction: column
+		width: 100%
+		box-sizing: border-box
+		+paddingEm(64px, 24px, 0, 24px)
+		font-size: .9rem
 		position: absolute
 		top: 0
 		bottom: 0
 		left: 0
-		+paddingEm(96px, 24px, 0, 24px)
 		text-align: center
 		background-color: $mainColor
 		color: #000
 		display: none
+		+xs-block
+			font-size: 1rem
+		+sm-block
+			padding-top: 6em
 	&__detailsName
 		margin-bottom: 0.71em
 		font-family: $fontTitle
@@ -40,20 +49,17 @@
 		@extend .member__detailsName
 		+fontEm(16px)
 	&__detailsText
-		margin: 4.71em 0
-		//+marginRem(66px, 0, 117px, 0)
+		margin: auto
 		padding: 0 0.875em
 		font-family: $fontText
 		line-height: 1.75
 		+fontEm(14px)
+
+
 	&__detailsSocial
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 0
-		+paddingRem(40px, 34px, 50px, 34px)
+		padding: 2.5rem 2% 3.125rem
 		border-top: 1px dashed $borderColor
 	&__socialLink
 		fill: rgba(0, 0, 0, .5)
 .member:hover .member__details
-	display: block
+	display: flex

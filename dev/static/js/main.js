@@ -10,6 +10,26 @@ document.body.onload = function(){
     }
   }, 1000)
 };
+//PIXEL LAYOUT
+// $(function(){
+//   $.pixlayout("../img/Untitled.png");
+// });
+//AJAX GALERY
+$(document).ready(function() {
+    function displayPhotos(data) {
+      var photoHTML = "";
+      $.each(data,function(i,photo) {
+        photoHTML += '<div class="portfolioPrev portfolioPrev_fashion"><div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">' + photo.title +'</span><div class="portfolioPrev__controls"><a class="portfolioPrev__popup" href="#fashion"><button class="portfolioPrev__btn portfolioPrev__btn_view"><svg class="icon icon-search "><use xlink:href="../static/img/svg/symbol/sprite.svg#search"></use></svg></button></a><button class="portfolioPrev__btn portfolioPrev__btn_link"><svg class="icon icon-link-symbol "><use xlink:href="../static/img/svg/symbol/sprite.svg#link-symbol"></use></svg></button></div></div></div>'
+        // '<div class="picbox"><figure><img src="' + photo.url + '" class="frame"><figcaption>' + photo.description + '</figcaption></figure></div>';
+
+      }); // end each
+
+      $('#portfolio__prev').html(photoHTML);
+    };
+
+    $.getJSON("gallery.json", displayPhotos);
+
+});
 
 //SCROLL
 (function (){

@@ -1,5 +1,5 @@
 .about
-	+paddingRem(98px, 0, 73px, 0)
+	+paddingRem(98px, 0, 114px, 0)
 	text-align: center
 	position: relative
 	&__title
@@ -10,12 +10,12 @@
 		+shift-xs-left(1)
 		margin-bottom: 4.187em
 	&__controls
-		+marginRem(0, 0, 83px, 0)
+		+marginRem(0, 0, 68px, 0)
+
+
 	&__btn
-		//margin-right: $offset_one_side
-		+from(498px)
-			&:not(:last-child)
-				margin-right: $offset
+		margin: 0 $offset_one_side $offset_one_side
+
 
 	&__advantages
 		margin-bottom: 4.5rem
@@ -29,7 +29,6 @@
 	&__numbers
 		+wrapper
 		padding-top: 5.4rem
-		padding-bottom: 2.5625rem
 	&__numItem
 		flex: 1 183px
 		margin-bottom: 2rem
@@ -66,6 +65,7 @@
 	&__title
 		font-family: $fontTitle
 		+fontEm(22px)
+		text-transform: capitalize
 		&_marg
 			margin-bottom: 1.272em
 

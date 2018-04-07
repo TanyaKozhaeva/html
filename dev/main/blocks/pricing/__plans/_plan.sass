@@ -31,18 +31,13 @@
 				background: url(../../static/img/general/planBg3-365w.jpg) center left no-repeat
 				background-size: cover
 
-
-
-
 	&__popular
-		// position: absolute
-		// top: 0
-		// left: 0
-		// transform: translateY(-100%)
 		display: block
 		width: 100%
-		+paddingEm(14px, 0, 14px, 0)
+		box-sizing: border-box
+		+paddingEm(14px, 14px, 14px, 14px)
 		+fontEm(15px)
+		text-transform: capitalize
 		background-color: #e6e6e6
 
 	&__title
@@ -85,7 +80,7 @@
 		margin-bottom: 4px
 		background-color: #fff
 	&__item
-		+paddingEm(22px, 0, 22px, 0)
+		+paddingEm(22px, 22px, 22px, 22px)
 		color: #808080
 	&__item:not(:last-child)
 		border-bottom: 1px solid #f0f0f0
@@ -100,8 +95,10 @@
 	&__btn
 		display: block
 		width: 100%
-		+paddingEm(18px, 0, 16px, 0)
+		+paddingEm(18px, 16px, 16px, 16px)
 		+fontRem(14px)
 		font-family: $fontTitle
+		text-transform: capitalize
 		color: $textColorBlack
 		background-color: #fff
+	

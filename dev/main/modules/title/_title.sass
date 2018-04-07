@@ -11,20 +11,21 @@
 	&__main
 			width: 100%
 			+fontEm(30px)
-			letter-spacing: .5px
 			font-family: $fontTitle
 			color: $textColorBlack
-			font-weight: 900
 			&_pos_absolute
 				position: absolute
 				bottom: 0
-				left: 50%
-				transform: translate(-50%, 50%)
+				transform: translateY(50%)
 				+sm-block
-					transform: translate(-50%, 0)
+					transform: translateY(0)
 
 
 	&__behind
 			+fontEm(91px)
 			font-family: $fontSubtitle
 			color: #f0f0f0
+#yourElement
+  animation-duration: 3s
+  animation-delay: 2s
+  animation-iteration-count: infinite
