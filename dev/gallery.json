@@ -1,0 +1,45 @@
+{
+  "items":
+  [
+    {
+      "title": "Travel",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Fashion",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Fantasy",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Animate",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Extreme",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Support",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Content",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    },
+    {
+      "title": "Outsourcing",
+      "slider": ["1", "2", "3", "4", "5"],
+      "text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
+    }
+  ]
+}

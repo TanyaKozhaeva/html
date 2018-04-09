@@ -14,13 +14,15 @@
     +sm-block
       +paddingRem(0, 38px, 0, 38px)
   &__nav
-    position: absolute
-    right: 0
+    height: calc(100vh - 40px)
+    position: fixed
+    left: 50%
+    bottom: 40px
+    transform: translateX(-50%)
     padding: 0 3rem
-    background: $mainColorBlack
-    display: none
     z-index: 1500
     flex-flow: column
+    justify-content: space-around
     &_visible
       display: flex
     +sm-block
@@ -31,18 +33,93 @@
       position: static
       padding: 0
 
+
+  // &__nav
+  //   position: absolute
+  //   right: 0
+  //   padding: 0 3rem
+  //   background: $mainColorBlack
+  //   display: none
+  //   z-index: 1500
+  //   flex-flow: column
+  //   &_visible
+  //     display: flex
+  //   +sm-block
+  //     width: 100%
+  //     display: flex
+  //     flex-flow: row wrap
+  //     justify-content: space-between
+  //     position: static
+  //     padding: 0
+
+// .dropdown
+//   width: 35px
+//   height: 100%
+//   cursor: pointer
+//   +sm-block
+//     display: none
+// .dropdown__line
+//   display: inline-block
+//   width: 100%
+//   height: 1px
+//   background-color: $mainColor
+//   position: relative
+//   &::before,
+//   &::after
+//     content: ""
+//     @extend .dropdown__line
+//     position: absolute
+//   &::before
+//     top: 10px
+//   &::after
+//     bottom: 10px
+// .dropdown_closed
+//   span
+//     background-color: transparent
+//     &::before
+//       top: 0
+//       transform-origin: 50% 50%
+//       transform: rotate(45deg)
+//     &::after
+//       bottom: 0
+//       transform-origin: 50% 50%
+//       transform: rotate(135deg)
 .dropdown
-  width: 35px
-  height: 100%
+  width: 36px
+  height: 40px
+  position: fixed
+  bottom: 0
+  left: 50%
+  margin-left: -18px
+  z-index: 1400
+  background-color: red
   cursor: pointer
   +sm-block
     display: none
+  &::before
+    content: ""
+    display: block
+    width: 160px
+    height: 160px
+    position: absolute
+    left: 50%
+    bottom: -50%
+    transform: translate(-50%, 50%)
+    z-index: -1
+    border-radius: 100%
+    background-color: $mainColor
+    transform: translate3d(-46%, -122%, 0) scale(4)
+  &:hover::before
+    // transform: translate3d(-46%, -122%, 0) scale(4)
+  &:hover.header__nav
+    height: auto
 .dropdown__line
   display: inline-block
   width: 100%
-  height: 1px
-  background-color: $mainColor
+  height: 2px
+  background-color: $textColor
   position: relative
+  bottom: 50%
   &::before,
   &::after
     content: ""
@@ -63,3 +140,6 @@
       bottom: 0
       transform-origin: 50% 50%
       transform: rotate(135deg)
+.nav__link
+  line-height: 1
+  // !!!!!!!!!!!!!

@@ -1,10 +1,11 @@
-.about
+.about#about
 	.wrapper
 		+title({
 				"main": "This is the one page polo",
 				"behind": "About"
-			})(class = "about__title animated slideInDown" id="yourElement")
-		p.about__text.text.text_size_m.slideInDown#yourElement Molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu ente. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.do eiusmod tempor incididunt ut dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitationconsequat. 
+			})(class = "about__title" data-aos="fade-down"
+     data-aos-easing="linear")
+		p.about__text.text.text_size_m(data-aos="fade-down" data-aos-easing="linear") Molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu ente. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.do eiusmod tempor incididunt ut dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitationconsequat. 
 		.about__controls
 			+button({
 				"text": "More info"
@@ -14,16 +15,16 @@
 				"text": "Join Experiance"
 			})(class = "btn_color_main about__btn")
 		.about__advantages.row
-			.about__advantage.advantage.advantage_black
+			.about__advantage.advantage.advantage_black(data-aos="fade-up-right" data-aos-delay="150" data-aos-easing="ease-in-sine" data-aos-duration="500")
 				div.advantage__icon.advantage__icon_star
 					+icon('star-half', 'color_main')
 				div.advantage__title Responsive design
-			.about__advantage.advantage.advantage_light
+			.about__advantage.advantage.advantage_light(data-aos="fade-up-right" data-aos-delay="80" data-aos-easing="ease-in-sine" data-aos-duration="600")
 				span.advantage__icon.advantage__icon_internet
 					+icon('internet', 'color_light')
 				div.advantage__title.advantage__title_marg Awesome features
 				p.advantage__text.text.text_size_m.text_color_light Lorem ipsum dolor sit amet, consectetur adipiscing elitelquam. Fusce quis nulla tincidunt interdum magna vitae.
-			.about__advantage.advantage.advantage_black
+			.about__advantage.advantage.advantage_black(data-aos="fade-up-right" data-aos-easing="ease-in-sine" data-aos-duration="600")
 				span.advantage__icon.advantage__icon_loked
 					+icon('locked', 'color_main')
 				div.advantage__title Powerful security

@@ -1,10 +1,27 @@
 .member
 	position: relative
+	overflow: hidden
+	&__mainInfo
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 50%
+			transform: translate(-100%, -50%)
+			border: 7em solid transparent
+			border-left: 8em solid red
+			// animation: translate 5s
+	&__mainInfo:hover::before
+		animation: translate 3s ease-in
+	&__mainInfo:hover .member__details
+		animation-name: opacity
+		animation-delay: 2.5s
+
+
+
 	&__info
 		+paddingEm(0, 24px, 0, 24px)
 		background-color: #ebebeb
-		&:hover .member__details
-			display: block
 	&__infoItem
 		display: block
 		+paddingRem(22px, 0, 22px, 0)
@@ -34,7 +51,7 @@
 		text-align: center
 		background-color: $mainColor
 		color: #000
-		display: none
+		transform: translateX(100%)
 		+xs-block
 			font-size: 1rem
 		+sm-block
@@ -61,5 +78,27 @@
 		border-top: 1px dashed $borderColor
 	&__socialLink
 		fill: rgba(0, 0, 0, .5)
+// .member:hover .member__details
+// 	// display: flex
+.member:hover .member__mainInfo::before
+	animation: translate 3s
 .member:hover .member__details
-	display: flex
+	animation: translate2 2s 1s
+
+@keyframes translate
+	// 0%, 100%
+	// 	transform: translate(-100%, -50%)
+	// 50%
+	// 	transform: translate(-10%, -50%)
+	// 60%
+	// 	transform: translate(0, -50%)
+	0%, 100%
+		transform: translate(-100%, -50%)
+	60%
+		transform: translate(0, -50%)
+
+@keyframes translate2
+	0%
+		transform: translateX(100%)
+	100%
+		transform: translateX(0)

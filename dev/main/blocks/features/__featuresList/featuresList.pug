@@ -1,6 +1,6 @@
 mixin feature(data)
-	each item in data.items
-		.feature.features__item
+	each item, index in data.items
+		.feature.features__item(data-aos="fade-up-right" data-aos-delay=`${index}00`)
 			span.feature__icon(class=`feature__icon_${item.class}`)
 				+icon(item.icon, 'color_light')
 			.feature__title.subtitle= item.title

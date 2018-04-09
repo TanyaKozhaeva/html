@@ -10,26 +10,67 @@ document.body.onload = function(){
     }
   }, 1000)
 };
-//PIXEL LAYOUT
-// $(function(){
-//   $.pixlayout("../img/Untitled.png");
+
+//Animate AOS
+// AOS.init({
+//   disable: 'mobile'
 // });
-//AJAX GALERY
-$(document).ready(function() {
-    function displayPhotos(data) {
-      var photoHTML = "";
-      $.each(data,function(i,photo) {
-        photoHTML += '<div class="portfolioPrev portfolioPrev_fashion"><div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">' + photo.title +'</span><div class="portfolioPrev__controls"><a class="portfolioPrev__popup" href="#fashion"><button class="portfolioPrev__btn portfolioPrev__btn_view"><svg class="icon icon-search "><use xlink:href="../static/img/svg/symbol/sprite.svg#search"></use></svg></button></a><button class="portfolioPrev__btn portfolioPrev__btn_link"><svg class="icon icon-link-symbol "><use xlink:href="../static/img/svg/symbol/sprite.svg#link-symbol"></use></svg></button></div></div></div>'
-        // '<div class="picbox"><figure><img src="' + photo.url + '" class="frame"><figcaption>' + photo.description + '</figcaption></figure></div>';
 
-      }); // end each
 
-      $('#portfolio__prev').html(photoHTML);
-    };
+//COUNTER
+// $('.numItem__val').each(function(){
+//   var innerText = $(this).text()
+//   console.log(isNaN(innerText))
+// })
 
-    $.getJSON("gallery.json", displayPhotos);
+//AJAX
 
-});
+// $(document).ready(function(){
+//   $.getJSON('gallery.json',function( data ){
+//     var array = data;
+//     var array2 = array.slice(0, 4)
+//     console.log(array2)
+//     templatePrev = Handlebars.compile( $('#galleryPrev-template').html() );
+//     $('#portfolio__prev').append(templatePrev(array));
+//     $('#ajax-btn').click(function(){
+//       array2 = $(data).slice(0, 4)
+//       $('#portfolio__prev').append(templatePrev(array2));
+//       if(array.length == 0){
+//         $('#ajax-btn').hide();
+//       }
+//
+//     })
+//   });
+// });
+
+function galleryShow(){
+  if($(window).width() > 1100){
+    $('.portfolio__prevItem').show();
+    $('#showMore').hide();
+  } else {
+    $('.portfolio__prevItem').slice(0, 4).show();
+    $('#showMore').click(function(e){
+      e.preventDefault();
+      $('.portfolio__prevItem:hidden').slice(0, 4).show();
+      if($('.portfolio__prevItem:hidden').length == 0){
+        $('#showMore').hide();
+      }
+    })
+  }
+};
+
+$(window).on('load resize', galleryShow);
+
+// $('#ajax-btn').click(function(){
+//     $.getJSON('gallery.json',function( data ){
+//       console.log(data)
+//         templatePrev = Handlebars.compile( $('#galleryPrev-template').html() );
+//         $('#portfolio__prev').append(templatePrev(data));
+//         templateSlides = Handlebars.compile( $('#gallerySLides-template').html() );
+//         $('.portfolio__gallery').append(templateSlides(data));
+//     });
+// });
+//});
 
 //SCROLL
 (function (){
@@ -131,28 +172,23 @@ $('#contactForm').on('submit', function(){
       url: 'http://jsonplaceholder.typicode.com/posts',
       data: data,
       success: function(data){
-        $('#contactForm').addClass('form_success')
-        $('.form__input').val('');
+        $('.callback__wrap_success').show()
+        $(formID)[0].reset();
       },
       error: function(data){
-        $('#formNewsletter').addClass('form_error')
+        $('.callback__wrap_error').show()
       }
     })
     }
     return false
 })
+$('.callback__closeBtn').click(function(){
+    $('.callback__wrap').hide()
+})
 
 //Pop UP
 $('.portfolioPrev__popup').magnificPopup({
   type: 'inline',
-  gallery:{
-    enabled:true,
-    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
-
-    tPrev: 'Previous (Left arrow key)', // title for left button
-    tNext: 'Next (Right arrow key)', // title for right button
-    tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
-  },
   callbacks:{
     open: function() {
           $('.slider-for').slick({

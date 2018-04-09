@@ -75,6 +75,7 @@ gulp.task('scripts', function() {
     return gulp.src([
             // Библиотеки
             'dev/static/libs/jquery.mask.min.js',
+            'dev/static/libs/wow.min.js',
             'dev/static/libs/magnific/jquery.magnific-popup.min.js',
             'dev/static/libs/slick/slick.min.js',
             //'dev/static/libs/jquery.nicescroll.js',

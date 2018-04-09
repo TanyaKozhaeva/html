@@ -1,26 +1,5 @@
-mixin portfolioPrev(name)
-	.portfolioPrev(class=`portfolioPrev_${name.toLowerCase()}`)
-		.portfolioPrev__descr
-			span.portfolioPrev__title.subtitle Fulwidth slides
-			span.portfolioPrev__name.text= name
-			.portfolioPrev__controls
-				a(href=`#${name.toLowerCase()}`).portfolioPrev__popup
-					button.portfolioPrev__btn.portfolioPrev__btn_view
-						+icon("search")
-				button.portfolioPrev__btn.portfolioPrev__btn_link
-					+icon("link-symbol")
-
-.portfolio
-	.portfolio__prev#portfolio__prev
-		+portfolioPrev("Travel")
-		+portfolioPrev("Fashion")
-		+portfolioPrev("Fantasy")
-		+portfolioPrev("Animate")
-		+portfolioPrev("Extreme")
-		+portfolioPrev("Support")
-		+portfolioPrev("Content")
-		+portfolioPrev("Outsourcing")
-	.portfolio__gallery.mfp-hide
+.portfolio#portfolio
+	.portfolio__wrapper
 		+portfolioItem([
 			{
 				"title": "Travel",
@@ -63,5 +42,6 @@ mixin portfolioPrev(name)
 				"text": "Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum."
 			}
 		])
-
-		//- .fashion#fashion.mfp-hide pepepepep
+	+button({
+			"text": "Show more"
+		})(class = "portfolio__prevBtn btn btn_color_main btn_size_xs" id="showMore")

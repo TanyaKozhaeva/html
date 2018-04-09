@@ -1,6 +1,18 @@
 mixin portfolioItem(data)
   each i in data
-    .portfolioItem(id= i.title.toLowerCase())
+    .portfolio__prevItem
+      .portfolioPrev(class=`portfolioPrev_${i.title.toLowerCase()}`)
+        .portfolioPrev__descr
+          span.portfolioPrev__title.subtitle Fulwidth slides
+          span.portfolioPrev__name.text= i.title
+          .portfolioPrev__controls
+            a(href=`#${i.title.toLowerCase()}`).portfolioPrev__popup
+              button.portfolioPrev__btn.portfolioPrev__btn_view
+                +icon("search")
+            button.portfolioPrev__btn.portfolioPrev__btn_link
+              +icon("link-symbol")
+          
+    .portfolio__slideItem.portfolioItem.mfp-hide(id= i.title.toLowerCase())
       +title({
         "main": i.title,
         "behind": null
@@ -9,20 +21,8 @@ mixin portfolioItem(data)
       .portfolioItem__slider.slider-for
         each j in i.slider
           .portfolioItem__pic(class='portfolioItem__pic_' + j)
-        //-each j, index in i.slider
-          //-- var num = index+1
-        
-          //- - var num = index+1
-          //- picture.portfolioItem__pic
-          //-   source(srcset="../static/img/content/portfolio/prev" + num + "-966w-2x.jpg")
-          //-   img(src="../static/img/content/portfolio/prev" + num + "-966w-2x.jpg", alt= j)
       .portfolioItem__sliderNav.slider-nav
         each j in i.slider
           .portfolioItem__prev(class='portfolioItem__prev_' + j )
-          //- - var num = index+1
-          //- picture.portfolioItem__prev
-          //-   source(srcset="../static/img/content/portfolio/prev" + num + "-483w.jpg")
-          //-   img(src="../static/img/content/portfolio/prev" + num + "-483w.jpg", alt= j)
-
       p.portfolioItem__text.text= i.text
-      button.portfolioItem__close.mfp-close
+      button.portfolioItem__close.closeBtn.mfp-close

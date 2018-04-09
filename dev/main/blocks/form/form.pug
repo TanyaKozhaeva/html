@@ -1,4 +1,4 @@
-.contactBlock
+.contactBlock#contact
 	.wrapper
 		+title({
 				"main": "Send us Message",
@@ -18,3 +18,18 @@
 			+button({
 				"text": "Send"
 			})(class = "form__btn btn_color_main btn_textTransform" type="submit")
+		.contactBlock__callback.callback
+			.callback__wrap.callback__wrap_success
+				.callback__item.callback__item_success
+					button.callback__closeBtn.closeBtn
+					p.callback__title Thank you! 
+					p.callback__text You order is accepted
+					span.callback__icon
+						+icon('success', 'callback__icon_color_succsess')
+			.callback__wrap.callback__wrap_error
+				.callback__item.callback__item_error
+					button.callback__closeBtn.closeBtn
+					p.callback__title Sorry, something went wrong 
+					p.callback__text Please try again later
+					span.callback__icon
+						+icon('error', 'callback__icon_color_error')
