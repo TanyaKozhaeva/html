@@ -11,10 +11,10 @@ document.body.onload = function(){
   }, 1000)
 };
 
-//Animate AOS
-// AOS.init({
-//   disable: 'mobile'
-// });
+// Animate AOS
+AOS.init({
+  disable: 'mobile'
+});
 
 
 //COUNTER
