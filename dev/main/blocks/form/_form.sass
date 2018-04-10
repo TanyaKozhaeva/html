@@ -2,10 +2,18 @@
 	+paddingRem(120px, 0, 130px, 0)
 	position: relative
 	background-color: #f0f0f0
-	background-image: url(../../static/img/general/map-1920w.png)
+	background-image: url(../../static/img/general/map-560w.png)
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
+	+xs-block
+		background-image: url(../../static/img/general/map-780w.png)
+	+sm-block
+		background-image: url(../../static/img/general/map-960w.png)
+	+md-block
+		background-image: url(../../static/img/general/map-1100w.png)
+	+lg-block
+		background-image: url(../../static/img/general/map-1920w.png)
 
 	&__title
 		+marginEm(0, 0, 174px, 0)

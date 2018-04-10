@@ -14,7 +14,6 @@
     width: 50%
     font-size: 1rem
   +lg-block
-    width: 50%
     font-size: 1.3rem
   &__title
     +marginEm(0, 0, 30px, 0)
@@ -25,41 +24,58 @@
   &__pic
       width: 100%
       height: 0
-      padding-bottom: 13%
-      &_1
-        background: url(../../static/img/content/portfolio/prev1-966w-2x.jpg) center bottom no-repeat
-        background-size: cover
-      &_2
-        background: url(../../static/img/content/portfolio/prev2-966w-2x.jpg) center no-repeat
-        background-size: cover
-      &_3
-        background: url(../../static/img/content/portfolio/prev3-966w-2x.jpg) center no-repeat
-        background-size: cover
-      &_4
-        background: url(../../static/img/content/portfolio/prev4-966w-2x.jpg) center no-repeat
-        background-size: cover
-      &_5
-        background: url(../../static/img/content/portfolio/prev5-966w-2x.jpg) center no-repeat
-        background-size: cover
+      padding-bottom: 8%
+      font-size: 0
 
-  &__prev
-      width: 100%
-      height: 70px
       &_1
-        background: url(../../static/img/content/portfolio/prev1-483w.jpg) center no-repeat
+        background: url(../../static/img/content/portfolio/prev1-483w.jpg) center bottom no-repeat
         background-size: cover
+        @media (min-resolution: 192dpi)
+          background-image: url(../../static/img/content/portfolio/prev1-966w-2x.jpg)
+        +lg-block
+          background-image: url(../../static/img/content/portfolio/prev1-966w-2x.jpg)
+        @media (min-resolution: 192dpi) and (min-width: $break_lg)
+          background-image: url(../../static/img/content/portfolio/prev1-1720w.jpg)
+
       &_2
         background: url(../../static/img/content/portfolio/prev2-483w.jpg) center no-repeat
         background-size: cover
+        @media (min-resolution: 192dpi)
+          background-image: url(../../static/img/content/portfolio/prev2-966w-2x.jpg)
+        +lg-block
+          background-image: url(../../static/img/content/portfolio/prev2-966w-2x.jpg)
+
+        @media (min-resolution: 192dpi) and (min-width: $break_lg)
+          background-image: url(../../static/img/content/portfolio/prev2-1720w.jpg)
+
       &_3
         background: url(../../static/img/content/portfolio/prev3-483w.jpg) center no-repeat
         background-size: cover
+        @media (min-resolution: 192dpi)
+          background-image: url(../../static/img/content/portfolio/prev3-966w-2x.jpg)
+        +lg-block
+          background-image: url(../../static/img/content/portfolio/prev3-966w-2x.jpg)
+
+        @media (min-resolution: 192dpi) and (min-width: $break_lg)
+          background-image: url(../../static/img/content/portfolio/prev3-1720w.jpg)
       &_4
         background: url(../../static/img/content/portfolio/prev4-483w.jpg) center no-repeat
         background-size: cover
+        @media (min-resolution: 192dpi)
+          background-image: url(../../static/img/content/portfolio/prev4-966w-2x.jpg)
+        +lg-block
+          background-image: url(../../static/img/content/portfolio/prev4-966w-2x.jpg)
+        @media (min-resolution: 192dpi) and (min-width: $break_lg)
+          background-image: url(../../static/img/content/portfolio/prev4-1720w.jpg)
       &_5
         background: url(../../static/img/content/portfolio/prev5-483w.jpg) center no-repeat
         background-size: cover
+        @media (min-resolution: 192dpi)
+          background-image: url(../../static/img/content/portfolio/prev5-966w-2x.jpg)
+        +lg-block
+          background-image: url(../../static/img/content/portfolio/prev5-966w-2x.jpg)
+        @media (min-resolution: 192dpi) and (min-width: $break_lg)
+          background-image: url(../../static/img/content/portfolio/prev5-1720w.jpg)
 
   &__text
     text-align: center

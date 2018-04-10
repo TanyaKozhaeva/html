@@ -12,14 +12,12 @@
 .text
 	font-family: $fontText
 	+fontEm(13px)
-	//line-height: 1.85 !!!!!!!!!!
 	letter-spacing: 0.5px
 	color: $textColor
 	&_size
 		&_m
 			+fontEm(16px)
 			line-height: 1.63
-			//text-align: center
 	&_color
 		&_light
 			color: #fff
@@ -36,6 +34,7 @@
 	border: 1px solid #fff
 	border-radius: 100%
 	background-color: $mainColor
+	font-size: 0
 	&::before
 		content: "X"
 		display: block

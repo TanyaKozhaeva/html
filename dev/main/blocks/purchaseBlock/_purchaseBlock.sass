@@ -5,7 +5,6 @@
 		padding-bottom: 7.3125rem
 		position: relative
 	&__title
-		//margin-left: $offset_lg_one_side
 		margin-bottom: 3.4em
 		z-index: 2
 		.title__main
@@ -16,7 +15,6 @@
 		+col
 		+size(12)
 		+size-sm(6)
-	//	+shift-lg-right(6)
 	&__text
 		margin-bottom: 2.6em
 	&__list
@@ -31,8 +29,6 @@
 		&__img
 			width: 100%
 			font-size: .6rem
-			+lg-block
-				font-size: .94rem
 			&::after
 				content: "O"
 				display: block
@@ -52,8 +48,19 @@
 				max-height: 466px
 				position: absolute
 				z-index: 2
-				background: url(../../static/img/general/manRun-581w.png) center top no-repeat
+				background: url(../../static/img/general/manRun-350w.png) center top no-repeat
 				background-size: cover
+	@media (min-resolution: 192dpi) and (min-width: $break_sm)
+		&__img::before
+			background-image: url(../../static/img/general/manRun-350w-2x.png)
+	+lg-block
+		&__img
+			font-size: .94rem
+			&::before
+				background-image: url(../../static/img/general/manRun-581w.png)
+	@media (min-resolution: 192dpi) and (min-width: $break_lg)
+		&__img::before
+			background-image: url(../../static/img/general/manRun-581w-2x.png)
 
 	.list
 		&__item

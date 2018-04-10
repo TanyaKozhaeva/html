@@ -3,11 +3,12 @@ header.header
 		.row.header__row
 			.header__logo.logo
 				picture.logo__img
-					source(srcset="static/img/general/logo.png, static/img/general/logo-2x.png")
+					source(srcset="static/img/general/logo.png, static/img/general/logo-2x.png 2x")
 					img(src="static/img/general/logo.png", alt="Marvel")
 			.header__navPanel
 				.dropdown.header__dropdown
-					span.dropdown__line
+					button.dropdown__btn
+						span.dropdown__label Open menu
 				+nav([
 				{
 				"href": "#home",

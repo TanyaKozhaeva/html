@@ -29,6 +29,9 @@
 			bottom: 0
 			background: url(../../static/img/general/mainScreenBg-549w.png) center no-repeat
 			background-size: cover
+	@media (min-resolution: 192dpi) and (min-width: $break_md)
+		&::after
+			background-image: url(../../static/img/general/mainScreenBg-549w-2x.png)
 
 	&__row
 		flex-direction: column

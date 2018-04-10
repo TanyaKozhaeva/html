@@ -2,18 +2,28 @@
 	+paddingRem(106px, 0, 79px, 0)
 	position: relative
 	background-color: $mainColor
-	&::before
-		content: ""
-		display: block
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		background: url(../../static/img/general/pricingBg-1920w.jpg) center no-repeat
-		background-size: cover
-		opacity: .3
-		mix-blend-mode: multiply
+	+xs-block
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: url(../../static/img/general/pricingBg-780w.jpg) center no-repeat
+			background-size: cover
+			opacity: .3
+			mix-blend-mode: multiply
+	+sm-block
+		&::before
+			background-image: url(../../static/img/general/pricingBg-960w.jpg)
+	+md-block
+		&::before
+			background-image: url(../../static/img/general/pricingBg-1100w.jpg)
+	+lg-block
+		&::before
+			background-image: url(../../static/img/general/pricingBg-1920w.jpg)
 	&__title
 		+marginEm(0, 0, 182px, 0)
 		.title__behind

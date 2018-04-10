@@ -6,7 +6,7 @@
 			})(class = "contactBlock__title")
 		form(method="POST" action="#" novalidate).form.contactBlock__form#contactForm
 			fieldset.form__field
-				input(type="text" name="firstName" placeholder="First Name (Required)").form__input
+				input(type="text" name="firstName" autofocus placeholder="First Name (Required)").form__input
 			fieldset.form__field
 				input(type="text" name="lastName" placeholder="Last Name (Required)").form__input
 			fieldset.form__field
@@ -21,14 +21,14 @@
 		.contactBlock__callback.callback
 			.callback__wrap.callback__wrap_success
 				.callback__item.callback__item_success
-					button.callback__closeBtn.closeBtn
+					button.callback__closeBtn.closeBtn Close pop up
 					p.callback__title Thank you! 
 					p.callback__text You order is accepted
 					span.callback__icon
 						+icon('success', 'callback__icon_color_succsess')
 			.callback__wrap.callback__wrap_error
 				.callback__item.callback__item_error
-					button.callback__closeBtn.closeBtn
+					button.callback__closeBtn.closeBtn Close pop up
 					p.callback__title Sorry, something went wrong 
 					p.callback__text Please try again later
 					span.callback__icon

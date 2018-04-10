@@ -7,53 +7,21 @@
     <meta name="keywords" content="">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
-    <link rel="shortcut icon" href="static/img/general/icons/compass32x32.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="76x76" href="static/img/general/icons/compass76x76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="static/img/general/icons/compass120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="static/img/general/icons/compass152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/img/general/icons/compass180x180.png">
+    <link rel="shortcut icon" href="static/img/general/icons/map-32w.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/img/general/icons/map-76w.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/img/general/icons/map-120w.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/img/general/icons/map-152w.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/general/icons/map-180w.png">
     <link rel="stylesheet" type="text/css" href="main/css/reset.css">
     <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="main/css/magnificPopup.css">
-    <link rel="stylesheet" type="text/css" href="static/libs/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="static/libs/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="main/css/perfetto.css">
     <link rel="stylesheet" type="text/css" href="main/css/main.css">
-    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <title>Главная страница
     </title>
   </head>
   <body>
     <div class="preloader" id="preloader">
-      <div class="loader">
-        <div id="loaderSvgWrapper">
-          <svg xmlns:svg="http://www.w3.org/2000/svg" viewbox="0 0 100 100" id="preLoader" width="250px" height="250px">
-            <path style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;" d="m 58.26475,43.628481 15.7247,-27.287018 -31.4936,0.02553 z" id="T1"></path>
-            <path style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;" d="m 58.26475,43.628481 31.4936,-0.02553 -15.7689,-27.261492 z" id="T2"></path>
-            <path style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;" d="M 58.26475,43.628481 74.03365,70.88997 89.75835,43.602954 Z" id="T3"></path>
-            <path style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;" d="M 58.26475,43.628481 42.54006,70.915503 74.03365,70.889973 Z" id="T4"></path>
-            <path style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;" d="m 58.26475,43.628481 -31.49359,0.02553 15.7689,27.261491 z" id="T5"></path>
-            <path style="stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;" d="M 58.26475,43.628481 42.49585,16.366995 26.77116,43.654011 Z" id="T6"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="debug">
-      <div>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      <div class="preloader__object">
+        <div class="loader"></div>
       </div>
     </div>
     <div class="mainScreen" id="home">
@@ -68,11 +36,13 @@
         <div class="row header__row">
           <div class="header__logo logo">
             <picture class="logo__img">
-              <source srcset="static/img/general/logo.png, static/img/general/logo-2x.png"><img src="static/img/general/logo.png" alt="Marvel">
+              <source srcset="static/img/general/logo.png, static/img/general/logo-2x.png 2x"><img src="static/img/general/logo.png" alt="Marvel">
             </picture>
           </div>
           <div class="header__navPanel">
-            <div class="dropdown header__dropdown"><span class="dropdown__line"></span></div>
+            <div class="dropdown header__dropdown">
+              <button class="dropdown__btn"><span class="dropdown__label">Open menu</span></button>
+            </div>
                 <nav class="nav header__nav"><a class="nav__link" href="#home">Home</a><a class="nav__link" href="#service">Service</a><a class="nav__link" href="#about">About</a><a class="nav__link" href="#portfolio">Portfolio</a><a class="nav__link" href="#plans">Plans</a><a class="nav__link" href="#contact">Contact</a>
                 </nav>
           </div>
@@ -273,22 +243,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Travel</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_fashion">
@@ -312,22 +275,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Fashion</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_fantasy">
@@ -351,22 +307,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Fantasy</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_animate">
@@ -390,22 +339,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Animate</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_extreme">
@@ -429,22 +371,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Extreme</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_support">
@@ -468,22 +403,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Support</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_content">
@@ -507,22 +435,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Content</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
             <div class="portfolio__prevItem">
               <div class="portfolioPrev portfolioPrev_outsourcing">
@@ -546,22 +467,15 @@
                   <div class="title portfolioItem__title">
                     <h2 class="title__main">Outsourcing</h2>
                   </div>
-              <div class="portfolioItem__slider slider-for">
-                <div class="portfolioItem__pic portfolioItem__pic_1"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_2"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_3"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_4"></div>
-                <div class="portfolioItem__pic portfolioItem__pic_5"></div>
-              </div>
-              <div class="portfolioItem__sliderNav slider-nav">
-                <div class="portfolioItem__prev portfolioItem__prev_1"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_2"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_3"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_4"></div>
-                <div class="portfolioItem__prev portfolioItem__prev_5"></div>
+              <div class="portfolioItem__slider single-item">
+                <div class="portfolioItem__pic portfolioItem__pic_1">Slide1 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_2">Slide2 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_3">Slide3 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_4">Slide4 text</div>
+                <div class="portfolioItem__pic portfolioItem__pic_5">Slide5 text</div>
               </div>
               <p class="portfolioItem__text text">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
-              <button class="portfolioItem__close closeBtn mfp-close"></button>
+              <button class="portfolioItem__close closeBtn mfp-close">Close pop up</button>
             </div>
       </div>
           <button class="btn portfolio__prevBtn btn btn_color_main btn_size_xs" id="showMore">Show more</button>
@@ -604,9 +518,6 @@
           </div>
         </div>
       </div>
-      <picture class="service__teamPhoto">
-        <source srcset="static/img/general/serviceTeam-885w.jpg, static/img/general/serviceTeam-1700w-2x.jpg 2x"><img src="static/img/general/serviceTeam-885w.jpg" alt="Our service team">
-      </picture>
     </div>
     <div class="pricing" id="plans">
       <div class="wrapper">
@@ -783,7 +694,7 @@
             </div>
         <form class="form contactBlock__form" method="POST" action="#" novalidate id="contactForm">
           <fieldset class="form__field">
-            <input class="form__input" type="text" name="firstName" placeholder="First Name (Required)">
+            <input class="form__input" type="text" name="firstName" autofocus placeholder="First Name (Required)">
           </fieldset>
           <fieldset class="form__field">
             <input class="form__input" type="text" name="lastName" placeholder="Last Name (Required)">
@@ -802,7 +713,7 @@
         <div class="contactBlock__callback callback">
           <div class="callback__wrap callback__wrap_success">
             <div class="callback__item callback__item_success">
-              <button class="callback__closeBtn closeBtn"></button>
+              <button class="callback__closeBtn closeBtn">Close pop up</button>
               <p class="callback__title">Thank you! </p>
               <p class="callback__text">You order is accepted</p><span class="callback__icon">
                 <svg class="icon icon-success callback__icon_color_succsess">
@@ -812,7 +723,7 @@
           </div>
           <div class="callback__wrap callback__wrap_error">
             <div class="callback__item callback__item_error">
-              <button class="callback__closeBtn closeBtn"></button>
+              <button class="callback__closeBtn closeBtn">Close pop up</button>
               <p class="callback__title">Sorry, something went wrong </p>
               <p class="callback__text">Please try again later</p><span class="callback__icon">
                 <svg class="icon icon-error callback__icon_color_error">
@@ -867,10 +778,10 @@
       </div>
     </footer>
     <script src="static/js/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="static/js/libs.min.js"></script>
-    <script src="static/libs/wow.min.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="static/js/main.js"></script>
+    <script>AOS.init({disable: 'mobile'})</script>
+    <script src="static/libs/magnific/jquery.magnific-popup.min.js" defer></script>
+    <script src="static/libs/slick/slick.min.js" defer></script>
+    <script src="static/js/main.js" defer></script>
   </body>
 </html>

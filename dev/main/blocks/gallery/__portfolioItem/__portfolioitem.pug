@@ -18,11 +18,9 @@ mixin portfolioItem(data)
         "behind": null
       })(class = "portfolioItem__title")
       
-      .portfolioItem__slider.slider-for
-        each j in i.slider
-          .portfolioItem__pic(class='portfolioItem__pic_' + j)
-      .portfolioItem__sliderNav.slider-nav
-        each j in i.slider
-          .portfolioItem__prev(class='portfolioItem__prev_' + j )
+      .portfolioItem__slider.single-item
+        each j, index in i.slider
+          -var x = index + 1
+          .portfolioItem__pic(class='portfolioItem__pic_' + x)= j
       p.portfolioItem__text.text= i.text
-      button.portfolioItem__close.closeBtn.mfp-close
+      button.portfolioItem__close.closeBtn.mfp-close Close pop up

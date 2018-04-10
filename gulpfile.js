@@ -21,6 +21,7 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace');
+    gcmq = require('gulp-group-css-media-queries');
 
 
 // SASS
@@ -74,12 +75,14 @@ gulp.task('browsersync', function() {
 gulp.task('scripts', function() {
     return gulp.src([
             // Библиотеки
-            'dev/static/libs/jquery.mask.min.js',
-            'dev/static/libs/wow.min.js',
-            'dev/static/libs/magnific/jquery.magnific-popup.min.js',
-            'dev/static/libs/slick/slick.min.js',
+            // 'dev/static/libs/jquery.mask.min.js',
+            // 'dev/static/js/jquery.js',
+            // 'dev/static/libs/slick/slick.min.js',
+            'dev/static/libs/aos/aos.js',
+            // 'dev/static/libs/magnific/jquery.magnific-popup.min.js',
             //'dev/static/libs/jquery.nicescroll.js',
             'dev/static/libs/validate/jquery.validate.min.js'
+
         ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -210,13 +213,21 @@ gulp.task('img', function() {
 
 gulp.task('build', ['clean', 'sass', 'scripts'], function() {
     var buildCss = gulp.src('dev/main/css/*.css')
+        .pipe(gcmq())
         .pipe(gulp.dest('product/main/css'));
 
     var buildFonts = gulp.src('dev/static/fonts/**/*')
         .pipe(gulp.dest('product/static/fonts'));
+    var buildJsJS = gulp.src([
+                'dev/static/js/libs.min.js',
+                'dev/static/js/main.js'
+            ])
+            // .pipe(concat('main.js'))
+            // .pipe(uglify())
+            .pipe(gulp.dest('product/static/js'))
 
-    var buildJs = gulp.src('dev/static/js/**.js')
-        .pipe(gulp.dest('product/static/js'));
+    // var buildJs = gulp.src('dev/static/js/**.js')
+    //     .pipe(gulp.dest('product/static/js'));
 
     var buildImg = gulp.src('dev/static/img/**/*')
         .pipe(gulp.dest('product/static/img'));
