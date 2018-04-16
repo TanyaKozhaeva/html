@@ -6,12 +6,32 @@
     +marginEm(0, 0, 128px, 0)
   &__members
     justify-content: center
-  &__member
+  &__memberWrap
     +col()
     +size(12)
     +size-xs(6)
     +size-sm(6)
     +size-md(4)
     max-width: 320px
+    height: 494px
     margin-bottom: $offset
-    // +size-md(4)
+    &:hover .member
+      transform: rotateX(90deg)
+  &__member
+    width: 100%
+    height: 100%
+    position: relative
+    transform-origin: 50% 50%
+    transform-style: preserve-3d
+    transition: .4s all
+    .member
+      &__mainInfo
+        position: absolute
+    		width: 100%
+    		height: 100%
+    		transform: rotateX(0deg) translate3d(0px, 0px, 247px)
+      &__details
+        position: absolute
+        width: 100%
+        height: 100%
+        transform: rotateX(-90deg) translate3d(0px, 0px, 247px)

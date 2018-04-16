@@ -28,19 +28,22 @@
 		+size-sm(6)
 		margin-bottom: 1.3125rem
 		position: relative
-		&_textarea
-			+col()
-			+size(12)
-			margin-bottom: 1.1rem
-	&__input
-		display: inline-block
-		width: 100%
+	&__fieldTextarea
+		position: relative
+		+col()
+		+size(12)
+		min-height: 18rem
+		margin-bottom: 1.1rem
 	&__textarea
 		width: 100%
-		min-height: 18rem
+		height: 100%
 		overflow: auto
 		+sm-block
 			min-height: 31.8125rem
+	&__input
+		display: inline-block
+		width: 100%
+
 
 	&__input,
 	&__textarea

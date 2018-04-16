@@ -24,13 +24,17 @@ html(lang="en")
 		include modules/title/title
 		block content
 		include modules/footer/footer
-		
+		<!-- build:js js/fast-libs.js-->
 		script(src="static/js/jquery.js")
-		script(src="static/js/libs.min.js")
+		script(src="static/libs/aos/aos.js")
+		<!-- endbuild-->
+		<!-- build:js js/slow-libs.js async-->
+		script(src="static/libs/validate/jquery.validate.min.js")
+		script(src="static/libs/magnific/jquery.magnific-popup.min.js")
+		script(src="static/libs/slick/slick.min.js")
+		script(src="static/js/main.js")
+		<!-- endbuild-->
 		script AOS.init({disable: 'mobile'})
-		script(src="static/libs/magnific/jquery.magnific-popup.min.js" defer)
-		script(src="static/libs/slick/slick.min.js" defer)
-		script(src="static/js/main.js" defer)
 		
 
 	

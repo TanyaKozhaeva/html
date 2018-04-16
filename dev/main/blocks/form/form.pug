@@ -6,18 +6,19 @@
 			})(class = "contactBlock__title")
 		form(method="POST" action="#" novalidate).form.contactBlock__form#contactForm
 			fieldset.form__field
-				input(type="text" name="firstName" autofocus placeholder="First Name (Required)").form__input
+				input(type="text" name="firstName" placeholder="First Name (Required)").form__input
 			fieldset.form__field
 				input(type="text" name="lastName" placeholder="Last Name (Required)").form__input
 			fieldset.form__field
 				input(type="email" name="email" placeholder="Email (Required)").form__input
 			fieldset.form__field
 				input(type="text" name="subject" placeholder="Subject").form__input
-			fieldset.form__field.form__field_textarea
+			fieldset.form__fieldTextarea
 				textarea(name="message" placeholder="Type your massage").form__textarea
 			+button({
-				"text": "Send"
-			})(class = "form__btn btn_color_main btn_textTransform" type="submit")
+				"text": "Send",
+				"icon": "load"
+			})(class = "form__btn btn_color_main btn_textTransform" type="submit" id="contactFormBtn")
 		.contactBlock__callback.callback
 			.callback__wrap.callback__wrap_success
 				.callback__item.callback__item_success

@@ -19,6 +19,7 @@
     "gulp-cssnano": "^2.1.2",
     "gulp-debug": "^3.2.0",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.0",
     "gulp-newer": "^1.3.0",
     "gulp-notify": "^2.2.0",
@@ -31,6 +32,7 @@
     "gulp-svg-sprite": "^1.3.7",
     "gulp-svgmin": "^1.2.4",
     "gulp-uglifyjs": "^0.6.2",
+    "gulp-useref": "^3.1.5",
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^5.0.0",
     "smart-grid": "^2.0.1"

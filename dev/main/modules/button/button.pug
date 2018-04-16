@@ -1,2 +1,5 @@
 mixin button(data)
 	button.btn&attributes(attributes)= data.text
+		if(data.icon)
+			span.btn__icon
+				+icon(data.icon)

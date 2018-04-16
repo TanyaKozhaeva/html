@@ -11,18 +11,18 @@ document.body.onload = function(){
   }, 1000)
 };
 
-// Animate AOS
-// AOS.init({
-//   disable: 'mobile'
-// });
-
 
 //COUNTER
-// $('.numItem__val').each(function(){
-//   var innerText = $(this).text()
-//   console.log(isNaN(innerText))
-// })
 
+// function counter(){
+//   $('.numItem__val').each(function(){
+//     var innerText = $(this).text()
+//     for(i=0; i<innerText; i++){
+//       console.log(i)
+//     }
+//   })
+// }
+// $(window).on('load', counter);
 //AJAX
 
 // $(document).ready(function(){
@@ -43,32 +43,32 @@ document.body.onload = function(){
 //   });
 // });
 
-function galleryShow(){
+(function(){
+  var itemToShow = $('.portfolio__prevItem');
+  var btn = $('#showMore');
   if($(window).width() > 1100){
-    $('.portfolio__prevItem').show();
-    $('#showMore').hide();
+    $(itemToShow).show();
+    $(btn).hide();
   } else {
-    $('.portfolio__prevItem').slice(0, 4).show();
-    $('#showMore').click(function(e){
-      e.preventDefault();
+    $(itemToShow).slice(0, 4).show();
+    $(btn).click(function(){
+      console.log(itemToShow)
       $('.portfolio__prevItem:hidden').slice(0, 4).show();
       if($('.portfolio__prevItem:hidden').length == 0){
         $('#showMore').hide();
       }
     })
   }
-};
-
-$(window).on('load resize', galleryShow);
+}());
+//
+// $(window).on('load resize', galleryShow);
 
 
 //SCROLL
 (function (){
     $('.nav__link').click( function(e){
   var scroll_el = $(this).attr('href');
-        //if ($(scroll_el).length != 0) {
       $('html, body').delay(200).animate({ scrollTop: $(scroll_el).offset().top }, 1500);
-       // }
       return false;
     });
 }());
@@ -130,6 +130,7 @@ $('#contactForm').on('submit', function(){
   });
 
     if($(formID).valid()){
+      $('#contactFormBtn').prop('disabled', true)
           var data = $(this).serialize();
     $.ajax({
       type: 'POST',
@@ -144,6 +145,7 @@ $('#contactForm').on('submit', function(){
       }
     })
     }
+    $('#contactFormBtn').prop('disabled', false)
     return false
 })
 $('.callback__closeBtn').click(function(){
