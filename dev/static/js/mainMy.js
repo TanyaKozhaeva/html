@@ -52,8 +52,7 @@ document.body.onload = function(){
   } else {
     $(itemToShow).slice(0, 4).show();
     $(btn).click(function(){
-      console.log(itemToShow)
-      $('.portfolio__prevItem:hidden').slice(0, 4).show();
+      $('.portfolio__prevItem:hidden').slice(0, 4).show("slow");
       if($('.portfolio__prevItem:hidden').length == 0){
         $('#showMore').hide();
       }
@@ -137,11 +136,11 @@ $('#contactForm').on('submit', function(){
       url: 'http://jsonplaceholder.typicode.com/posts',
       data: data,
       success: function(data){
-        $('.callback__wrap_success').show()
+        $('.callback__wrap_success').addClass('callback__wrap_visible')
         $(formID)[0].reset();
       },
       error: function(data){
-        $('.callback__wrap_error').show()
+        $('.callback__wrap_error').addClass('callback__wrap_visible')
       }
     })
     }
@@ -149,19 +148,51 @@ $('#contactForm').on('submit', function(){
     return false
 })
 $('.callback__closeBtn').click(function(){
-    $('.callback__wrap').hide()
+    $('.callback__wrap').removeClass('callback__wrap_visible')
 })
 
 //Pop UP
-$('.portfolioPrev__popup').magnificPopup({
-  type: 'inline',
-  callbacks:{
-    open: function() {
-      $('.single-item').slick({
-          infinite: true,
-          dots: true,
-          arrows: false
-      });
-        }
-  }
+// $('.portfolioPrev__popup').magnificPopup({
+//   type: 'inline',
+//   callbacks:{
+//     open: function() {
+//       $('.single-item').slick({
+//           infinite: true,
+//           dots: true,
+//           arrows: false
+//       });
+//         }
+//   }
+// });
+
+//SLIDER
+function sliderInit(){
+$('.single-item').not('.slick-initialized').slick({
+    infinite: true,
+    dots: true,
+    arrows: false
 });
+}
+
+(function(){
+  var allSlides = $(".portfolio__slideItem");
+  var slideItem;
+  $('.portfolioPrev__btn_view').click(function(){
+    $(allSlides).hide();
+    var parentIndex = $(this).parents(".portfolio__prevItem").attr("data-slide")
+    slideItem = $(".portfolio__slideItem[data-slide="+parentIndex+"]")
+    $(slideItem).show();
+    var slider = $(slideItem).find(".portfolioItem__slider")
+    $(slider).addClass("single-item")
+    sliderInit();
+  })
+  $('.portfolioItem__close').click(function(){
+    $(slideItem).hide()
+  })
+  $(document).mouseup(function(e) {
+    var $target = $(e.target);
+    if ($target.closest(slideItem).length == 0 && $target.closest(slideItem).length == 0) {
+      $(slideItem).hide();
+        }
+      });
+}());

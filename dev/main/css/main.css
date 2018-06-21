@@ -2007,6 +2007,7 @@ img.mfp-img {
 .portfolio {
   padding: 4rem 0 4.0625rem 0;
   text-align: center;
+  position: relative;
   padding-bottom: 5.03rem; }
   @media screen and (min-width: 780px) {
     .portfolio {
@@ -2034,6 +2035,13 @@ img.mfp-img {
         height: 310px; } }
   .portfolio__prevBtn {
     margin-top: 1.5rem; }
+  .portfolio__slideItem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3000;
+    display: none; }
 
 .portfolioPrev {
   width: 100%;
@@ -2134,8 +2142,6 @@ img.mfp-img {
   width: 90%;
   box-sizing: border-box;
   font-size: .5rem;
-  margin: 0 auto;
-  position: relative;
   padding: 1.875em 1.875em 1.875em 1.875em;
   border: 2px solid #ffe400;
   background-color: #fff; }
@@ -2679,7 +2685,12 @@ img.mfp-img {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.3);
-  display: none; }
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s; }
+  .callback__wrap_visible {
+    opacity: 1;
+    visibility: visible; }
 
 .callback__icon {
   display: inline-block;

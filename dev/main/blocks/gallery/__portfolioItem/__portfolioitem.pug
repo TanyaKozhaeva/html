@@ -1,6 +1,6 @@
 mixin portfolioItem(data)
-  each i in data
-    .portfolio__prevItem
+  each i, index in data
+    .portfolio__prevItem(data-slide=index)
       .portfolioPrev(class=`portfolioPrev_${i.title.toLowerCase()}`)
         .portfolioPrev__descr
           span.portfolioPrev__title.subtitle Fulwidth slides
@@ -12,15 +12,15 @@ mixin portfolioItem(data)
             button.portfolioPrev__btn.portfolioPrev__btn_link
               +icon("link-symbol")
           
-    .portfolio__slideItem.portfolioItem.mfp-hide(id= i.title.toLowerCase())
+    .portfolio__slideItem.portfolioItem(id= i.title.toLowerCase())(data-slide=index)
       +title({
         "main": i.title,
         "behind": null
       })(class = "portfolioItem__title")
       
-      .portfolioItem__slider.single-item
+      .portfolioItem__slider
         each j, index in i.slider
           -var x = index + 1
           .portfolioItem__pic(class='portfolioItem__pic_' + x)= j
       p.portfolioItem__text.text= i.text
-      button.portfolioItem__close.closeBtn.mfp-close Close pop up
+      button.portfolioItem__close.closeBtn Close pop up
