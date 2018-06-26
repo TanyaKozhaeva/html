@@ -6,11 +6,8 @@ mixin portfolioItem(data)
           span.portfolioPrev__title.subtitle Fulwidth slides
           span.portfolioPrev__name.text= i.title
           .portfolioPrev__controls
-            a(href=`#${i.title.toLowerCase()}`).portfolioPrev__popup
-              button.portfolioPrev__btn.portfolioPrev__btn_view
-                +icon("search")
-            button.portfolioPrev__btn.portfolioPrev__btn_link
-              +icon("link-symbol")
+            button.portfolioPrev__btn
+              +icon("search")
           
     .portfolio__slideItem.portfolioItem(id= i.title.toLowerCase())(data-slide=index)
       +title({

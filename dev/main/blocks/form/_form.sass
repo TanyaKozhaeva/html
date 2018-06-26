@@ -50,10 +50,13 @@
 		+paddingRem(23px, 0, 21px, 20px)
 		border: 1px solid $borderColor
 		font-family: $fontText
+		&:focus
+			outline: 2px solid $mainColor
 	&__input::placeholder,
 	&__textarea::placeholder
 		color: $textColorBlack
 		opacity: 1
+
 	&__btn
 		min-width: 147px
 		margin-left: $offset_one_side

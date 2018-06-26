@@ -2008,6 +2008,7 @@ img.mfp-img {
   padding: 4rem 0 4.0625rem 0;
   text-align: center;
   position: relative;
+  overflow: hidden;
   padding-bottom: 5.03rem; }
   @media screen and (min-width: 780px) {
     .portfolio {
@@ -2036,12 +2037,49 @@ img.mfp-img {
   .portfolio__prevBtn {
     margin-top: 1.5rem; }
   .portfolio__slideItem {
-    position: absolute;
+    width: 90%;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.001);
     z-index: 3000;
-    display: none; }
+    display: none;
+    opacity: 0;
+    transition: all .6s; }
+    .portfolio__slideItem_visible {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1); }
+    @media screen and (min-width: 560px) {
+      .portfolio__slideItem {
+        width: 80%;
+        font-size: .7rem; } }
+    @media screen and (min-width: 780px) {
+      .portfolio__slideItem {
+        width: 60%;
+        font-size: 1rem; } }
+    @media screen and (min-width: 1100px) {
+      .portfolio__slideItem {
+        font-size: 1.3rem; } }
+  .portfolio__drop-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000; }
+  .portfolio__drop {
+    position: fixed;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.6, 1), opacity 1.5s cubic-bezier(0.25, 1, 0.6, 1), transform-origin 0s;
+    transform: scale(0.001);
+    transform-origin: 50% 50%;
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffe400; }
+  .portfolio_active .portfolio__drop {
+    transform: scale(6);
+    opacity: 0; }
 
 .portfolioPrev {
   width: 100%;
@@ -2090,11 +2128,11 @@ img.mfp-img {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       .portfolioPrev_content {
         background-image: url(../../static/img/content/portfolio/prev7-966w-2x.jpg); } }
-  .portfolioPrev_outsourcing {
+  .portfolioPrev_business {
     background: url(../../static/img/content/portfolio/prev8-483w.jpg) center no-repeat;
     background-size: cover; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      .portfolioPrev_outsourcing {
+      .portfolioPrev_business {
         background-image: url(../../static/img/content/portfolio/prev8-966w-2x.jpg); } }
   .portfolioPrev__descr {
     width: 100%;
@@ -2111,7 +2149,7 @@ img.mfp-img {
     text-transform: uppercase;
     position: relative; }
   .portfolioPrev__controls {
-    width: 96px;
+    width: 72px;
     height: 20px;
     border: 1px solid #b7b7b7;
     position: absolute;
@@ -2128,36 +2166,21 @@ img.mfp-img {
     border-radius: 100%;
     position: absolute;
     bottom: -22px;
+    left: 50%;
+    margin-left: -17px;
+    border: 1px solid #b7b7b7;
+    background-color: #ffe400;
     cursor: pointer; }
-    .portfolioPrev__btn_view {
-      right: 9px;
-      border: 1px solid #b7b7b7;
-      background-color: #ffe400; }
-    .portfolioPrev__btn_link {
-      left: 9px;
-      border: 1px solid #000;
-      background-color: #fff; }
 
 .portfolioItem {
-  width: 90%;
-  box-sizing: border-box;
   font-size: .5rem;
-  padding: 1.875em 1.875em 1.875em 1.875em;
+  padding: 1.875rem 1.875em;
+  box-sizing: border-box;
   border: 2px solid #ffe400;
   background-color: #fff; }
-  @media screen and (min-width: 560px) {
-    .portfolioItem {
-      width: 80%;
-      font-size: .7rem; } }
-  @media screen and (min-width: 780px) {
-    .portfolioItem {
-      width: 60%;
-      font-size: 1rem; } }
-  @media screen and (min-width: 1100px) {
-    .portfolioItem {
-      font-size: 1.3rem; } }
   .portfolioItem__title {
-    margin: 0 0 1.875em 0; }
+    font-size: 1rem;
+    margin: 0 0 1.875rem 0; }
   .portfolioItem__slider {
     width: 100%; }
   .portfolioItem__pic {
@@ -2226,6 +2249,7 @@ img.mfp-img {
         .portfolioItem__pic_5 {
           background-image: url(../../static/img/content/portfolio/prev5-1720w.jpg); } }
   .portfolioItem__text {
+    font-size: 1rem;
     text-align: center;
     color: #444444; }
   .portfolioItem__close {
@@ -2664,6 +2688,8 @@ img.mfp-img {
   padding: 1.4375rem 0 1.3125rem 1.25rem;
   border: 1px solid #b7b7b7;
   font-family: Muli, Arial, sans-serif; }
+  .form__input:focus, .form__textarea:focus {
+    outline: 2px solid #ffe400; }
 
 .form__input:-ms-input-placeholder, .form__textarea:-ms-input-placeholder {
   color: #444444;

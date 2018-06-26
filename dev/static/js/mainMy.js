@@ -14,15 +14,20 @@ document.body.onload = function(){
 
 //COUNTER
 
-// function counter(){
-//   $('.numItem__val').each(function(){
-//     var innerText = $(this).text()
-//     for(i=0; i<innerText; i++){
-//       console.log(i)
-//     }
-//   })
-// }
-// $(window).on('load', counter);
+function counter(){
+  $('.numItem__valNum').each(function(){
+    console.log($('.numItem__valNum'))
+    var innerText = $(this).text()
+    var i = 0;
+    var timerId = setTimeout(function go() {
+    console.log(i);
+    $('.numItem__valNum').text(i)
+    if (i < innerText) setTimeout(go, 10);
+    i+=10;
+  }, 10);
+  })
+}
+$(window).on('load', counter);
 //AJAX
 
 // $(document).ready(function(){
@@ -177,22 +182,88 @@ $('.single-item').not('.slick-initialized').slick({
 (function(){
   var allSlides = $(".portfolio__slideItem");
   var slideItem;
-  $('.portfolioPrev__btn_view').click(function(){
+  var container = $("#portfolio");
+  $('.portfolioPrev__btn').click(function(){
     $(allSlides).hide();
     var parentIndex = $(this).parents(".portfolio__prevItem").attr("data-slide")
-    slideItem = $(".portfolio__slideItem[data-slide="+parentIndex+"]")
+    slideItem = $(".portfolio__slideItem[data-slide="+parentIndex+"]");
+
+    bubbles.makeBubbles(10);
+
     $(slideItem).show();
+
     var slider = $(slideItem).find(".portfolioItem__slider")
     $(slider).addClass("single-item")
     sliderInit();
+
+
+    setTimeout(function () {
+      $(container).addClass("portfolio_active")
+    }, 20);
+
+    setTimeout(function () {
+      $(slideItem).addClass("portfolio__slideItem_visible");
+    }, 500);
+
+
+
   })
   $('.portfolioItem__close').click(function(){
-    $(slideItem).hide()
+    $(slideItem).removeClass("portfolio__slideItem_visible");
+    $(container).removeClass("portfolio_active")
+    bubbles.removeBubbles();
   })
   $(document).mouseup(function(e) {
     var $target = $(e.target);
     if ($target.closest(slideItem).length == 0 && $target.closest(slideItem).length == 0) {
-      $(slideItem).hide();
+      $(slideItem).removeClass("portfolio__slideItem_visible");
+      $(container).removeClass("portfolio_active")
+      bubbles.removeBubbles();
         }
       });
 }());
+/*
+var bubbles = {
+  makeBubbles: function(num){
+    var container = document.getElementById("portfolio");
+    var holdBubbles = document.createElement("div");
+    holdBubbles.classList.add("portfolio__drop-wrapper");
+    for (var i = 0; i < num; i++) {
+    var bubble = document.createElement("div");
+    bubble.classList.add("portfolio__drop");
+    bubble.style.top = Math.floor((Math.random() * 100)) + 'vh';
+    bubble.style.left = Math.floor((Math.random() * 100)) + 'vw';
+    bubble.style.transitionDelay = Math.random() + 's';
+    holdBubbles.appendChild(bubble);
+    }
+    container.appendChild(holdBubbles);
+  },
+
+  removeBubbles: function(){
+    $(".portfolio__drop-wrapper").remove();
+  }
+
+}
+*/
+var bubbles = {
+  makeBubbles: function(num){
+    var container = document.getElementById("portfolio");
+    var holdBubbles = document.createElement("div");
+    holdBubbles.classList.add("portfolio__drop-wrapper");
+    for (var i = 0; i < num; i++) {
+    var bubble = document.createElement("div");
+    bubble.classList.add("portfolio__drop");
+    bubble.style.top = Math.floor((Math.random() * 100)) + 'vh';
+    bubble.style.left = Math.floor((Math.random() * 100)) + 'vw';
+    bubble.style.transitionDelay = Math.random() + 's';
+    holdBubbles.appendChild(bubble);
+    }
+    //return holdBubbles;
+    container.appendChild(holdBubbles);
+  },
+
+  removeBubbles: function(){
+    $(".portfolio__drop-wrapper").remove();
+  }
+
+}
