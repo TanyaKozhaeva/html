@@ -23,7 +23,7 @@ block content
 
 mixin icon(name,mod)
 	- mod = mod || ''
-	svg(class="icon icon-" + name + ' ' + mod)
+	svg(class="icon icon-" + name + ' ' + mod aria-hidden="true")
 		use(xlink:href="static/svg/symbol/sprite.svg#" + name)
 
 

@@ -1,7 +1,5 @@
 .member
-	// position: relative
-	// overflow: hidden
-	// &__mainInfo
+	position: relative
 	&__text
 		+paddingEm(0, 24px, 0, 24px)
 		background-color: #ebebeb
@@ -21,6 +19,13 @@
 		height: auto
 
 	&__details
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		opacity: 0
 		display: flex
 		flex-direction: column
 		+paddingEm(64px, 24px, 0, 24px)

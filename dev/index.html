@@ -42,7 +42,7 @@
           </div>
           <div class="header__navPanel">
             <div class="dropdown header__dropdown">
-              <button class="dropdown__btn"><span class="dropdown__label">Open menu</span></button>
+              <button class="dropdown__btn" tabindex="1"><span class="dropdown__label">Open menu</span></button>
             </div>
                 <nav class="nav header__nav"><a class="nav__link" href="#home">Home</a><a class="nav__link" href="#service">Service</a><a class="nav__link" href="#about">About</a><a class="nav__link" href="#portfolio">Portfolio</a><a class="nav__link" href="#plans">Plans</a><a class="nav__link" href="#contact">Contact</a>
                 </nav>
@@ -58,28 +58,27 @@
         <p class="about__text text text_size_m" data-aos="fade-down" data-aos-easing="linear">Molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu ente. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.do eiusmod tempor incididunt ut dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitationconsequat. </p>
         <div class="about__controls">
               <button class="btn btn_color_black about__btn">More info
-              </button>
-              <button class="btn btn_color_main about__btn">Join Experiance
+              </button><button class="btn btn_color_main about__btn">Join Experiance
               </button>
         </div>
         <div class="about__advantages row">
           <div class="about__advantage advantage advantage_black" data-aos="fade-up-right" data-aos-delay="150" data-aos-easing="ease-in-sine" data-aos-duration="500">
             <div class="advantage__icon advantage__icon_star">
-              <svg class="icon icon-star-half color_main">
+              <svg class="icon icon-star-half color_main" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#star-half"></use>
               </svg>
             </div>
             <div class="advantage__title">Responsive design</div>
           </div>
           <div class="about__advantage advantage advantage_light" data-aos="fade-up-right" data-aos-delay="80" data-aos-easing="ease-in-sine" data-aos-duration="600"><span class="advantage__icon advantage__icon_internet">
-              <svg class="icon icon-internet color_light">
+              <svg class="icon icon-internet color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#internet"></use>
               </svg></span>
             <div class="advantage__title advantage__title_marg">Awesome features</div>
             <p class="advantage__text text text_size_m text_color_light">Lorem ipsum dolor sit amet, consectetur adipiscing elitelquam. Fusce quis nulla tincidunt interdum magna vitae.</p>
           </div>
           <div class="about__advantage advantage advantage_black" data-aos="fade-up-right" data-aos-easing="ease-in-sine" data-aos-duration="600"><span class="advantage__icon advantage__icon_loked">
-              <svg class="icon icon-locked color_main">
+              <svg class="icon icon-locked color_main" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#locked"></use>
               </svg></span>
             <div class="advantage__title">Powerful security</div>
@@ -87,22 +86,22 @@
         </div>
         <section class="about__numbers">
           <h2 class="about__numTitle title__main">Here’re some impressive numbers about us</h2>
-          <div class="numPanel">
-            <div class="about__numItem numItem">
-              <div class="numItem__val" id="num"> <span class="numItem__valNum">753</span></div>
-              <p class="numItem__text text">Project Complate</p>
+          <div class="numPanel" id="numPanel">
+            <div class="numPanel__item">
+              <div class="numPanel__val"><span class="numPanel__numeric" data-count="753">0</span></div>
+              <p class="numPanel__text text">Project Complate</p>
             </div>
-            <div class="about__numItem numItem">
-              <div class="numItem__val"> <span class="numItem__valNum">422</span></div>
-              <p class="numItem__text text">On Going Project</p>
+            <div class="numPanel__item">
+              <div class="numPanel__val"> <span class="numPanel__numeric" data-count="422">0</span></div>
+              <p class="numPanel__text text">On Going Project</p>
             </div>
-            <div class="about__numItem numItem">
-              <div class="numItem__val"> <span class="numItem__valNum">698</span><span>+</span></div>
-              <p class="numItem__text text">Happy Client</p>
+            <div class="numPanel__item">
+              <div class="numPanel__val"> <span class="numPanel__numeric" data-count="698">0</span><span>+</span></div>
+              <p class="numPanel__text text">Happy Client</p>
             </div>
-            <div class="about__numItem numItem">
-              <div class="numItem__val"> <span class="numItem__valNum">100</span><span>%</span></div>
-              <p class="numItem__text text">Positive Feedback</p>
+            <div class="numPanel__item">
+              <div class="numPanel__val"> <span class="numPanel__numeric" data-count="100">0</span><span>%</span></div>
+              <p class="numPanel__text text">Positive Feedback</p>
             </div>
           </div>
         </section>
@@ -118,25 +117,25 @@
             <p class="purchase__text text text_size_m">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etia fermentum vel libero eget interdum semper libero. </p>
             <ul class="purchase__list list text text_size_m">
               <li class="list__item">
-                <svg class="icon icon-star list__icon">
+                <svg class="icon icon-star list__icon" aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#star"></use>
                 </svg>
                 <p class="list__text">Responsive Design & Retina Ready.</p>
               </li>
               <li class="list__item">
-                <svg class="icon icon-star list__icon">
+                <svg class="icon icon-star list__icon" aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#star"></use>
                 </svg>
                 <p class="list__text">Business Solution Any Company.</p>
               </li>
               <li class="list__item">
-                <svg class="icon icon-star list__icon">
+                <svg class="icon icon-star list__icon" aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#star"></use>
                 </svg>
                 <p class="list__text">Powerful Admin Panel.</p>
               </li>
               <li class="list__item">
-                <svg class="icon icon-star list__icon">
+                <svg class="icon icon-star list__icon" aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#star"></use>
                 </svg>
                 <p class="list__text">24/7 Support.</p>
@@ -158,63 +157,63 @@
             </div>
         <div class="features__list row">
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="000"><span class="feature__icon feature__icon_security">
-                  <svg class="icon icon-padlock color_light">
+                  <svg class="icon icon-padlock color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#padlock"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Powerful Security</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="100"><span class="feature__icon feature__icon_ideas">
-                  <svg class="icon icon-bulb color_light">
+                  <svg class="icon icon-bulb color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#bulb"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Creative Ideas</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="200"><span class="feature__icon feature__icon_adminPanel">
-                  <svg class="icon icon-gears color_light">
+                  <svg class="icon icon-gears color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#gears"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Powerfull Admin Panel</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="300"><span class="feature__icon feature__icon_resolution">
-                  <svg class="icon icon-microphone color_light">
+                  <svg class="icon icon-microphone color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#microphone"></use>
                   </svg></span>
                 <div class="feature__title subtitle">High Resolution Theme</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="400"><span class="feature__icon feature__icon_interface">
-                  <svg class="icon icon-sunglasses color_light">
+                  <svg class="icon icon-sunglasses color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#sunglasses"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Awesome Interface</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="500"><span class="feature__icon feature__icon_websiteBuilder">
-                  <svg class="icon icon-paper-plane color_light">
+                  <svg class="icon icon-paper-plane color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#paper-plane"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Untimade Website Builder</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="600"><span class="feature__icon feature__icon_responsive">
-                  <svg class="icon icon-laptop color_light">
+                  <svg class="icon icon-laptop color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#laptop"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Responsive Theme</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="700"><span class="feature__icon feature__icon_content">
-                  <svg class="icon icon-bell color_light">
+                  <svg class="icon icon-bell color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#bell"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Custom content blocks</div>
                 <p class="feature__text text text_size_m">Lorem ipsum dolor sicon adipiscing elit. Etiam antferme ntubero eget rorem interdum.</p>
               </div>
               <div class="feature features__item" data-aos="fade-up-right" data-aos-delay="800"><span class="feature__icon feature__icon_design">
-                  <svg class="icon icon-camera color_light">
+                  <svg class="icon icon-camera color_light" aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#camera"></use>
                   </svg></span>
                 <div class="feature__title subtitle">Trendy design</div>
@@ -230,7 +229,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Travel</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -257,7 +256,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Fashion</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -284,7 +283,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Fantasy</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -311,7 +310,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Animate</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -338,7 +337,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Extreme</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -365,7 +364,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Support</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -392,7 +391,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Content</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -419,7 +418,7 @@
                 <div class="portfolioPrev__descr"><span class="portfolioPrev__title subtitle">Fulwidth slides</span><span class="portfolioPrev__name text">Business</span>
                   <div class="portfolioPrev__controls">
                     <button class="portfolioPrev__btn">
-                      <svg class="icon icon-search ">
+                      <svg class="icon icon-search " aria-hidden="true">
                         <use xlink:href="static/svg/symbol/sprite.svg#search"></use>
                       </svg>
                     </button>
@@ -453,28 +452,28 @@
               </div>
           <div class="service__advantages">
             <div class="service__advantage serviceAdvantage"><span class="serviceAdvantage__icon">
-                <svg class="icon icon-gears ">
+                <svg class="icon icon-gears " aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#gears"></use>
                 </svg></span>
               <div class="serviceAdvantage__title subtitle">Excellent Features</div>
               <p class="serviceAdvantage__text text text_size_m">Lorem ipsum doloar sit amet meconstur adipiscing.</p>
             </div>
             <div class="service__advantage serviceAdvantage"><span class="serviceAdvantage__icon">
-                <svg class="icon icon-camera ">
+                <svg class="icon icon-camera " aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#camera"></use>
                 </svg></span>
               <div class="serviceAdvantage__title subtitle">Simple & Clean</div>
               <p class="serviceAdvantage__text text text_size_m">Lorem ipsum doloar sit amet meconstur adipiscing.</p>
             </div>
             <div class="service__advantage serviceAdvantage"><span class="serviceAdvantage__icon">
-                <svg class="icon icon-case ">
+                <svg class="icon icon-case " aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#case"></use>
                 </svg></span>
               <div class="serviceAdvantage__title subtitle">Parallax Effect</div>
               <p class="serviceAdvantage__text text text_size_m">Lorem ipsum doloar sit amet meconstur adipiscing.</p>
             </div>
             <div class="service__advantage serviceAdvantage"><span class="serviceAdvantage__icon">
-                <svg class="icon icon-bell ">
+                <svg class="icon icon-bell " aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#bell"></use>
                 </svg></span>
               <div class="serviceAdvantage__title subtitle">24/7 Support</div>
@@ -551,7 +550,7 @@
             </div>
         <div class="team__members row">
               <div class="team__memberWrap">
-                <div class="member team__member">
+                <div class="member">
                   <div class="member__mainInfo">
                     <picture class="member__img">
                       <source srcset="static/img/content/willsomMale.jpg, static/img/content/willsomMale-2x.jpg 2x"><img src="static/img/content/willsomMale.jpg" alt="Robert Willsom">
@@ -563,22 +562,22 @@
                     <div class="member__detailsPos">web developer</div>
                     <p class="member__detailsText">Lorem ipsum dolor sit amet, nemore latine graecis id est, omnium latine eu per. Has ne illud appetere fabellas, ne quaeque nominati mea.</p>
                     <div class="member__detailsSocial social"><a class="social__link" href="#twtr">
-                        <svg class="icon icon-twtr  member__socialLink">
+                        <svg class="icon icon-twtr  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#twtr"></use>
                         </svg></a><a class="social__link" href="#lnkdn">
-                        <svg class="icon icon-lnkdn  member__socialLink">
+                        <svg class="icon icon-lnkdn  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#lnkdn"></use>
                         </svg></a><a class="social__link" href="#fb">
-                        <svg class="icon icon-fb  member__socialLink">
+                        <svg class="icon icon-fb  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
                         </svg></a><a class="social__link" href="#skype">
-                        <svg class="icon icon-skype  member__socialLink">
+                        <svg class="icon icon-skype  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#skype"></use>
                         </svg></a><a class="social__link" href="#pintrst">
-                        <svg class="icon icon-pintrst  member__socialLink">
+                        <svg class="icon icon-pintrst  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#pintrst"></use>
                         </svg></a><a class="social__link" href="#apple">
-                        <svg class="icon icon-apple  member__socialLink">
+                        <svg class="icon icon-apple  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#apple"></use>
                         </svg></a>
                     </div>
@@ -586,7 +585,7 @@
                 </div>
               </div>
               <div class="team__memberWrap">
-                <div class="member team__member">
+                <div class="member">
                   <div class="member__mainInfo">
                     <picture class="member__img">
                       <source srcset="static/img/content/willsomMale.jpg, static/img/content/willsomMale-2x.jpg 2x"><img src="static/img/content/willsomMale.jpg" alt="Robert Willsom">
@@ -598,22 +597,22 @@
                     <div class="member__detailsPos">web developer</div>
                     <p class="member__detailsText">Lorem ipsum dolor sit amet, nemore latine graecis id est, omnium latine eu per. Has ne illud appetere fabellas, ne quaeque nominati mea.</p>
                     <div class="member__detailsSocial social"><a class="social__link" href="#twtr">
-                        <svg class="icon icon-twtr  member__socialLink">
+                        <svg class="icon icon-twtr  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#twtr"></use>
                         </svg></a><a class="social__link" href="#lnkdn">
-                        <svg class="icon icon-lnkdn  member__socialLink">
+                        <svg class="icon icon-lnkdn  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#lnkdn"></use>
                         </svg></a><a class="social__link" href="#fb">
-                        <svg class="icon icon-fb  member__socialLink">
+                        <svg class="icon icon-fb  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
                         </svg></a><a class="social__link" href="#skype">
-                        <svg class="icon icon-skype  member__socialLink">
+                        <svg class="icon icon-skype  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#skype"></use>
                         </svg></a><a class="social__link" href="#pintrst">
-                        <svg class="icon icon-pintrst  member__socialLink">
+                        <svg class="icon icon-pintrst  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#pintrst"></use>
                         </svg></a><a class="social__link" href="#apple">
-                        <svg class="icon icon-apple  member__socialLink">
+                        <svg class="icon icon-apple  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#apple"></use>
                         </svg></a>
                     </div>
@@ -621,7 +620,7 @@
                 </div>
               </div>
               <div class="team__memberWrap">
-                <div class="member team__member">
+                <div class="member">
                   <div class="member__mainInfo">
                     <picture class="member__img">
                       <source srcset="static/img/content/willsomFemale.jpg, static/img/content/willsomFemale-2x.jpg 2x"><img src="static/img/content/willsomFemale.jpg" alt="Robert Willsom">
@@ -633,22 +632,22 @@
                     <div class="member__detailsPos">web developer</div>
                     <p class="member__detailsText">Lorem ipsum dolor sit amet, nemore latine graecis id est, omnium latine eu per. Has ne illud appetere fabellas, ne quaeque nominati mea.</p>
                     <div class="member__detailsSocial social"><a class="social__link" href="#twtr">
-                        <svg class="icon icon-twtr  member__socialLink">
+                        <svg class="icon icon-twtr  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#twtr"></use>
                         </svg></a><a class="social__link" href="#lnkdn">
-                        <svg class="icon icon-lnkdn  member__socialLink">
+                        <svg class="icon icon-lnkdn  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#lnkdn"></use>
                         </svg></a><a class="social__link" href="#fb">
-                        <svg class="icon icon-fb  member__socialLink">
+                        <svg class="icon icon-fb  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
                         </svg></a><a class="social__link" href="#skype">
-                        <svg class="icon icon-skype  member__socialLink">
+                        <svg class="icon icon-skype  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#skype"></use>
                         </svg></a><a class="social__link" href="#pintrst">
-                        <svg class="icon icon-pintrst  member__socialLink">
+                        <svg class="icon icon-pintrst  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#pintrst"></use>
                         </svg></a><a class="social__link" href="#apple">
-                        <svg class="icon icon-apple  member__socialLink">
+                        <svg class="icon icon-apple  member__socialLink" aria-hidden="true">
                           <use xlink:href="static/svg/symbol/sprite.svg#apple"></use>
                         </svg></a>
                     </div>
@@ -680,28 +679,26 @@
             <textarea class="form__textarea" name="message" placeholder="Type your massage"></textarea>
           </fieldset>
               <button class="btn form__btn btn_color_main btn_textTransform" type="submit" id="contactFormBtn">Send<span class="btn__icon">
-                  <svg class="icon icon-load ">
+                  <svg class="icon icon-load " aria-hidden="true">
                     <use xlink:href="static/svg/symbol/sprite.svg#load"></use>
                   </svg></span>
               </button>
         </form>
         <div class="contactBlock__callback callback" id="callback">
-          <div class="callback__wrap callback__wrap_success">
+          <div class="callback__wrap">
             <div class="callback__item callback__item_success">
               <button class="callback__closeBtn closeBtn">Close pop up</button>
               <p class="callback__title">Thank you! </p>
               <p class="callback__text">You order is accepted</p><span class="callback__icon">
-                <svg class="icon icon-success callback__icon_color_succsess">
+                <svg class="icon icon-success callback__icon_color_succsess" aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#success"></use>
                 </svg></span>
             </div>
-          </div>
-          <div class="callback__wrap callback__wrap_error">
             <div class="callback__item callback__item_error">
               <button class="callback__closeBtn closeBtn">Close pop up</button>
               <p class="callback__title">Sorry, something went wrong </p>
               <p class="callback__text">Please try again later</p><span class="callback__icon">
-                <svg class="icon icon-error callback__icon_color_error">
+                <svg class="icon icon-error callback__icon_color_error" aria-hidden="true">
                   <use xlink:href="static/svg/symbol/sprite.svg#error"></use>
                 </svg></span>
             </div>
@@ -713,26 +710,26 @@
       <div class="wrapper">
         <div class="row footer__row">
           <div class="footer__social footer__item social"><a class="social__link" href="#twtr">
-              <svg class="icon icon-twtr color_light">
+              <svg class="icon icon-twtr color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#twtr"></use>
               </svg></a><a class="social__link" href="#lnkdn">
-              <svg class="icon icon-lnkdn color_light">
+              <svg class="icon icon-lnkdn color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#lnkdn"></use>
               </svg></a><a class="social__link" href="#fb">
-              <svg class="icon icon-fb color_light">
+              <svg class="icon icon-fb color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#fb"></use>
               </svg></a><a class="social__link" href="#skype">
-              <svg class="icon icon-skype color_light">
+              <svg class="icon icon-skype color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#skype"></use>
               </svg></a><a class="social__link" href="#pintrst">
-              <svg class="icon icon-pintrst color_light">
+              <svg class="icon icon-pintrst color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#pintrst"></use>
               </svg></a><a class="social__link" href="#apple">
-              <svg class="icon icon-apple color_light">
+              <svg class="icon icon-apple color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#apple"></use>
               </svg></a></div>
           <div class="footer__phone footer__item phone"><a class="phone__link" href="tel:+123999000122233">
-              <svg class="icon icon-phone color_light">
+              <svg class="icon icon-phone color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#phone"></use>
               </svg></a>
             <div class="phone__info text vcard">
@@ -741,7 +738,7 @@
             </div>
           </div>
           <div class="footer__adress footer__item agress"><a class="adress__link" href="#map">
-              <svg class="icon icon-adress color_light">
+              <svg class="icon icon-adress color_light" aria-hidden="true">
                 <use xlink:href="static/svg/symbol/sprite.svg#adress"></use>
               </svg></a>
             <div class="adress__info text vcard">
@@ -751,13 +748,20 @@
           </div>
         </div>
       </div>
-    </footer><!-- build:js js/fast-libs.js-->
+    </footer>
+    <!-- build:js js/fast-libs.js-->
     <script src="static/js/jquery.js"></script>
-    <script src="static/libs/aos/aos.js"></script><!-- endbuild-->
-<!-- build:js js/slow-libs.js async-->
+    <script src="static/libs/aos/aos.js"></script>
+    <script src="static/libs/countUp.js"></script>
+    <script src="static/libs/svg4everybody.js"></script>
+    <script src="static/js/main-fast.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/slow-libs.js async-->
     <script src="static/libs/validate/jquery.validate.min.js"></script>
     <script src="static/libs/slick/slick.min.js"></script>
-    <script src="static/js/mainMy.js"></script><!-- endbuild-->
+    <script src="static/js/main-slow.js"></script>
+    <!-- endbuild-->
+    <script>svg4everybody()</script>
     <script>AOS.init({disable: 'mobile'})</script>
   </body>
 </html>

@@ -27,11 +27,6 @@
 	&__numbers
 		+wrapper
 		padding-top: 5.4rem
-	&__numItem
-		flex: 1 183px
-		margin-bottom: 2rem
-		// &:not(:last-child)
-		// 	margin-right: 2rem
 	&__numTitle
 		margin-bottom: 3.83em
 		text-transform: uppercase
@@ -103,7 +98,9 @@
 	+row-flex
 	justify-content: space-between
 	+paddingRem(0, 20px, 0, 36px)
-.numItem
+	&__item
+		flex: 1 183px
+		margin-bottom: 2rem
 	&__val
 		font-family: $fontTitle
 		+fontEm(46px)

@@ -32,14 +32,14 @@
 		position: relative
 		+col()
 		+size(12)
-		min-height: 18rem
+		height: 18rem
 		margin-bottom: 1.1rem
+		+sm-block
+			min-height: 31.8125rem
 	&__textarea
 		width: 100%
 		height: 100%
 		overflow: auto
-		+sm-block
-			min-height: 31.8125rem
 	&__input
 		display: inline-block
 		width: 100%
@@ -47,10 +47,11 @@
 
 	&__input,
 	&__textarea
-		+paddingRem(23px, 0, 21px, 20px)
+		+paddingRem(23px, 20px, 21px, 20px)
 		border: 1px solid $borderColor
 		font-family: $fontText
 		&:focus
+			border-color: $mainColor
 			outline: 2px solid $mainColor
 	&__input::placeholder,
 	&__textarea::placeholder
@@ -91,15 +92,20 @@
 		position: absolute
 		top: 50%
 		left: 50%
-		transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%) scale(0.005)
 		font-family: $fontTitle
 		+fontRem(20px)
 		background-color: $textColorLight
 		text-align: center
+		transition: 1s
+		display: none
+
 		&_success
 			border: 1px solid $mainColor
 		&_error
 			border: 1px solid #d9534f
+		&_visible
+		 	transform: translate(-50%, -50%) scale(1)
 	&__closeBtn
 		position: absolute
 		top: -1rem
@@ -111,7 +117,11 @@
 		margin-bottom: .8em
 
 
-
+@keyframes scale
+	0%
+		transform: scale(0.005)
+	100%
+		transform: scale(1)
 
 
 

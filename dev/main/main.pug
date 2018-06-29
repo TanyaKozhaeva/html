@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="utf-8")
-		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		meta(http-equiv='X-UA-Compatible' content="IE=edge")
 		meta(name="viewport" content="width=device-width,initial-scale=1")
 		meta(name="keywords" content="")
 		meta(name="format-detection" content="telephone=no")
@@ -27,12 +27,16 @@ html(lang="en")
 		<!-- build:js js/fast-libs.js-->
 		script(src="static/js/jquery.js")
 		script(src="static/libs/aos/aos.js")
+		script(src="static/libs/countUp.js")
+		script(src="static/libs/svg4everybody.js")
+		script(src="static/js/main-fast.js")
 		<!-- endbuild-->
 		<!-- build:js js/slow-libs.js async-->
 		script(src="static/libs/validate/jquery.validate.min.js")
 		script(src="static/libs/slick/slick.min.js")
-		script(src="static/js/mainMy.js")
+		script(src="static/js/main-slow.js")
 		<!-- endbuild-->
+		script svg4everybody()
 		script AOS.init({disable: 'mobile'})
 		
 

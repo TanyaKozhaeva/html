@@ -43,6 +43,10 @@
       opacity: 1
       .nav__link
         display: inline-block
+        &:hover,
+        &:focus
+          outline: none
+          text-decoration: underline
     +md-block
       width: 100%
       height: 100%
@@ -58,12 +62,9 @@
 .dropdown
   margin: 0 auto
   text-align: center
+  padding-bottom: .3rem
   +md-block
     display: none
-  &__btn
-    width: 36px
-    height: 40px
-    background: transparent
   &::before
     content: ""
     display: block
@@ -76,8 +77,17 @@
     z-index: -1
     border-radius: 50%
     background-color: $mainColor
-    box-shadow: 0px 0px 10px $textColorLight
+    border: 1px solid #fff
+    box-shadow: 0px 0px 10px 0px $textColorLight
     transition: transform .3s cubic-bezier(0.04, -0.1, 0.29, 0.98), width .3s cubic-bezier(0.04, -0.1, 0.29, 0.98), height .3s cubic-bezier(0.04, -0.1, 0.29, 0.98)
+  &__btn
+    width: 36px
+    height: 40px
+    background: transparent
+    transition: 1s
+    &:focus
+      transform: scale(1.08)
+
 
   &__label
     display: inline-block
